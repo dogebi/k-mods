@@ -46,7 +46,7 @@
   },
   {
    "i": 7,
-   "ko": "Claude Code 안에서 /plugin marketplace add SeongGwangJu/k-mods를 한 번 입력하고, /plugin install 이름@k-mods로 원하는 mod를 설치해요. 열려 있는 세션에는 /reload-plugins로 바로 적용돼요.",
+   "ko": "Claude Code 안에서 /plugin marketplace add dogebi/k-mods를 한 번 입력하고, /plugin install 이름@k-mods로 원하는 mod를 설치해요. 열려 있는 세션에는 /reload-plugins로 바로 적용돼요.",
    "ctx": "/",
    "n": 1
   },
@@ -106,7 +106,7 @@
   },
   {
    "i": 17,
-   "ko": "GitHub 저장소 SeongGwangJu/k-mods의 registry 폴더에서 빌드할 때 자동으로 만들어져요. mod를 제안하거나 정보를 고치려면 GitHub 이슈나 PR을 보내 주세요.",
+   "ko": "GitHub 저장소 dogebi/k-mods의 registry 폴더에서 빌드할 때 자동으로 만들어져요. mod를 제안하거나 정보를 고치려면 GitHub 이슈나 PR을 보내 주세요.",
    "ctx": "/",
    "n": 1
   },
@@ -1432,7 +1432,7 @@
   },
   {
    "i": 238,
-   "ko": "목록은 GitHub 저장소 SeongGwangJu/k-mods의 registry에서 자동으로 만들어져요. mod 추가와 수정은 PR로 받아요.",
+   "ko": "목록은 GitHub 저장소 dogebi/k-mods의 registry에서 자동으로 만들어져요. mod 추가와 수정은 PR로 받아요.",
    "ctx": "/guide/cheatsheet",
    "n": 76
   },

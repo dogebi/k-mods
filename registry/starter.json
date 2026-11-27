@@ -1,0 +1,36 @@
+{
+  "$schema": "./_schema.json",
+  "name": "starter",
+  "displayName": "추천 세트",
+  "displayNameEn": "Starter Set",
+  "summary": "처음 설치하기 좋은 추천 세트예요. ko-ui, skins, pixel-pals, ctx-strip, mod-store를 한 번에 설치해요",
+  "summaryEn": "The k-mods starter set: ko-ui, skins, pixel-pals, ctx-strip and mod-store in one install",
+  "category": "bundle",
+  "tags": [
+    "추천",
+    "묶음"
+  ],
+  "kind": "bundle",
+  "source": "./bundles/starter",
+  "dependencies": [
+    "ko-ui",
+    "skins",
+    "pixel-pals",
+    "ctx-strip",
+    "mod-store"
+  ],
+  "author": {
+    "name": "SeongGwangJu",
+    "url": "https://github.com/SeongGwangJu"
+  },
+  "license": "MIT",
+  "review": {
+    "date": "2026-10-12",
+    "by": "k-mods",
+    "claudeCode": "2.1.296",
+    "method": [
+      "validate",
+      "live-session"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "ko-ui",
+  "summary": "슬래시 커맨드 설명, `/config` 항목, 작업 표시줄 같은 화면 문구를 번역 사전에 맞춰 한국어로 표시해요.",
+  "summaryEn": "Dictionary-based mod that shows Claude Code's slash-command descriptions, /config rows, and some UI text in Korean.",
+  "category": "localize",
+  "tags": [
+    "한국어",
+    "번역",
+    "UI",
+    "i18n",
+    "사전"
+  ],
+  "kind": "upstream",
+  "source": {
+    "source": "github",
+    "repo": "moduvoice/claude-code-ko-ui",
+    "sha": "7a192004e6e13b40e83221c111102991b8aa9203"
+  },
+  "upstream": {
+    "repo": "moduvoice/claude-code-ko-ui",
+    "commit": "7a192004e6e13b40e83221c111102991b8aa9203",
+    "stars": 0
+  },
+  "author": {
+    "name": "moduvoice",
+    "url": "https://github.com/moduvoice"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/moduvoice/claude-code-ko-ui",
+  "commands": [
+    "/ko-dump"
+  ],
+  "surfaces": [
+    "terminal",
+    "desktop"
+  ],
+  "notes": [
+    "Claude Code 2.1.287 이상이 필요해요. 2.1.285에서는 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1` 환경 변수를 켜야 로드돼요.",
+    "모델 호출·네트워크 요청이 전혀 없는 고정 사전(dict.json) 치환 방식이라 토큰을 쓰지 않아요.",
+    "Spinner 단어 번역은 terminal 화면에서만 적용돼요(desktop은 원문 유지, 나머지 번역은 desktop에서도 적용돼요).",
+    "번역 안 된 새 문구는 `/ko-dump`로 확인해 `dict.json`에 직접 추가할 수 있어요(최대 200개까지 기록).",
+    "권한 확인 창, 환영 화면, 선택지 값, 에러 메시지, 프롬프트 아래 알약 문구는 훅이 없거나 번역하면 다른 정보가 사라져서 원문 그대로예요."
+  ],
+  "notesEn": [
+    "Requires Claude Code 2.1.287 or later. On 2.1.285, you must turn on the `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1` environment variable for it to load.",
+    "It substitutes text from a fixed dictionary (dict.json) with no model calls or network requests, so it uses no tokens.",
+    "Spinner word translation applies only on the terminal screen (desktop keeps the original text; the other translations also apply on desktop).",
+    "You can check new untranslated phrases with `/ko-dump` and add them to `dict.json` yourself (up to 200 are recorded).",
+    "Permission prompts, the welcome screen, option values, error messages and the pill text below the prompt stay in the original, because there is no hook for them or translating them would lose other information."
+  ],
+  "featured": true,
+  "preview": "docs/assets/mods/ko-ui.png",
+  "review": {
+    "date": "2026-10-06",
+    "by": "k-mods",
+    "claudeCode": "2.1.291",
+    "method": [
+      "validate",
+      "code-read"
+    ],
+    "findings": [
+      "validate 통과, gatingHooks 없음 (tool.call/tool.check/prompt.submit 등 차단형 훅 자체가 없음).",
+      "네트워크 호출·모델 호출·외부 프로세스 실행·파일 쓰기 없음 (코드 전체 확인, validate의 calls 목록과 일치).",
+      "$.fs.read로 자기 플러그인 폴더의 dict.json만 읽음.",
+      "$.store에 번역 안 된 문구 목록만 저장(최대 200개, 로컬 전용, 외부 전송 없음).",
+      "session.start 8초 뒤 1회 $.command.list/$.config.list로 번역 누락 항목을 스캔해 토스트로 알림. 가벼운 1회성 동작, 반복 타이머 아님."
+    ]
+  }
+}

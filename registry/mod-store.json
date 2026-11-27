@@ -1,0 +1,40 @@
+{
+  "$schema": "./_schema.json",
+  "name": "mod-store",
+  "displayName": "모드 상점",
+  "displayNameEn": "Mod Store",
+  "summary": "`/k-mods`를 입력하면 카탈로그가 열려요. 버튼으로 mod를 설치하거나 제거할 수 있어요",
+  "summaryEn": "Type /k-mods to browse this catalog in a pane and install or remove mods with one key",
+  "category": "tool",
+  "tags": [
+    "설치",
+    "카탈로그"
+  ],
+  "kind": "original",
+  "source": "./mods/mod-store",
+  "author": {
+    "name": "SeongGwangJu",
+    "url": "https://github.com/SeongGwangJu"
+  },
+  "license": "MIT",
+  "commands": [
+    "/k-mods"
+  ],
+  "surfaces": [
+    "terminal",
+    "desktop"
+  ],
+  "featured": true,
+  "preview": "docs/assets/mods/mod-store.png",
+  "review": {
+    "date": "2026-10-06",
+    "by": "k-mods",
+    "claudeCode": "2.1.291",
+    "method": [
+      "validate",
+      "code-read",
+      "unit-test",
+      "live-session"
+    ]
+  }
+}

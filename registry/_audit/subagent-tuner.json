@@ -1,0 +1,54 @@
+{
+  "name": "subagent-tuner",
+  "source": {
+    "source": "github",
+    "repo": "Kruhlikau/subagent-tuner",
+    "sha": "46bee016e183ca81ede82139fa01b17048ee721e"
+  },
+  "auditedWith": "2.1.302",
+  "validate": {
+    "success": true,
+    "errors": [],
+    "warnings": []
+  },
+  "hooks": [
+    "agent.offer",
+    "agent.spawn",
+    "session.start",
+    "tool.call{tool=Agent}",
+    "ui.close",
+    "ui.render{component=AbovePrompt}",
+    "ui.render{component=Pane}"
+  ],
+  "calls": [
+    "$.clock.now",
+    "$.clock.sleep",
+    "$.fs.write",
+    "$.process.run",
+    "$.session.surfaces",
+    "$.state.get",
+    "$.state.set",
+    "$.store.get",
+    "$.store.set",
+    "$.ui.ask",
+    "$.ui.close",
+    "$.ui.open",
+    "$.ui.panes",
+    "$.ui.resolve",
+    "$.ui.toast"
+  ],
+  "envReads": [],
+  "envWrites": [],
+  "gatingWithoutCatch": [
+    "ui.close"
+  ],
+  "commands": [],
+  "programs": [],
+  "urls": [],
+  "license": "LICENSE",
+  "permissions": [
+    "process",
+    "fs-write",
+    "gate"
+  ]
+}

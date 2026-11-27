@@ -1,0 +1,19 @@
+{
+  "name": "starter",
+  "version": "0.6.0",
+  "description": "처음 설치하기 좋은 추천 세트예요. ko-ui, skins, pixel-pals, ctx-strip, mod-store를 한 번에 설치해요",
+  "author": {
+    "name": "SeongGwangJu",
+    "url": "https://github.com/SeongGwangJu"
+  },
+  "homepage": "https://github.com/SeongGwangJu/k-mods/tree/main/bundles/starter",
+  "repository": "https://github.com/SeongGwangJu/k-mods",
+  "license": "MIT",
+  "dependencies": [
+    "ko-ui",
+    "skins",
+    "pixel-pals",
+    "ctx-strip",
+    "mod-store"
+  ]
+}

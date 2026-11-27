@@ -1,0 +1,81 @@
+{
+  "name": "pixel-pals",
+  "source": "./mods/pixel-pals",
+  "auditedWith": "2.1.296",
+  "validate": {
+    "success": true,
+    "errors": [],
+    "warnings": []
+  },
+  "hooks": [
+    "agent.spawn",
+    "classic.PermissionRequest",
+    "classic.SessionStart",
+    "classic.UserPromptSubmit",
+    "command.run{command=pals}",
+    "command.run{command=tales}",
+    "prompt.edit",
+    "prompt.submit",
+    "session.compact",
+    "session.measure",
+    "session.start",
+    "tool.call",
+    "tool.check",
+    "turn.complete",
+    "turn.start",
+    "ui.message",
+    "ui.render{component=AbovePrompt}",
+    "ui.render{component=SessionMode}",
+    "ui.render{component=Spinner}"
+  ],
+  "calls": [
+    "$.agent.list",
+    "$.clock.after",
+    "$.clock.every",
+    "$.clock.now",
+    "$.command.register",
+    "$.config.set",
+    "$.env.get",
+    "$.session.root",
+    "$.session.usage",
+    "$.settings.read",
+    "$.state.get",
+    "$.state.set",
+    "$.store.delete",
+    "$.store.get",
+    "$.store.set",
+    "$.ui.ask",
+    "$.ui.resolve",
+    "$.ui.toast"
+  ],
+  "envReads": [
+    "LANG",
+    "LC_ALL",
+    "LC_MESSAGES"
+  ],
+  "envWrites": [
+    "nothing"
+  ],
+  "gatingWithoutCatch": [
+    "agent.spawn",
+    "classic.PermissionRequest",
+    "classic.SessionStart",
+    "classic.UserPromptSubmit",
+    "prompt.submit",
+    "session.compact",
+    "tool.call",
+    "tool.check"
+  ],
+  "commands": [
+    "/pals",
+    "/tales"
+  ],
+  "programs": [],
+  "urls": [],
+  "license": "LICENSE",
+  "permissions": [
+    "gate",
+    "chat",
+    "env"
+  ]
+}

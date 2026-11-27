@@ -1,0 +1,489 @@
+import type { On } from 'claude-code'
+import { expect, mock, test } from 'claude-code/testing'
+
+import { parseCommand } from '../hooks/command'
+import { busyLabel, formatDuration, formatDurationKo, levelOf, newsOf, toolLabel } from '../hooks/pet'
+import { FINALE_MS, RANDOM_POOL, SPRITE_MS, STAGE_MS, THEMES, THEME_NAMES, finaleScene, petRow, pickRandom, segments, textWidth } from '../hooks/themes'
+import type { Act } from '../hooks/themes'
+
+const START = { cwd: '/tmp', surface: 'terminal', isInteractive: true } as const
+
+const RUN = { origin: { kind: 'composer' }, presentation: { isFullscreen: false, columns: 120 } } as const
+
+const SPINNER = {
+  component: 'Spinner',
+  props: { word: 'Sauteing', message: null, suffix: '…', mode: 'thinking' },
+} as const
+
+const BAND = {
+  component: 'AbovePrompt',
+  props: { hasSurvey: false, isWorking: true, maxRows: 10, bodyColumns: 80, scroll: { offset: 0, bodyRows: 9 }, view: {} },
+} as const
+
+const IDLE = { ...BAND, props: { ...BAND.props, isWorking: false } }
+
+const DONE = { turnId: 't1', reason: 'answer', answer: 'done', durationMs: 12_400, isAborted: false } as const
+
+/** The band's own text (the pet's stats and bubble), as text to search. */
+async function said(ui: { findAll: (query: { type: string }) => Promise<unknown> }): Promise<string> {
+  return JSON.stringify(await ui.findAll({ type: 'Text' }))
+}
+
+/** What a Client's module last drew, as text to search. */
+async function drawn(ui: { drawn: (scope?: { in?: string }) => Promise<unknown> }, key: string): Promise<string> {
+  return JSON.stringify(await ui.drawn({ in: key }))
+}
+
+// The /config rows the plugin wrote, as `[key, value]`.
+let rows: [string, unknown][] = []
+// What the AskUserQuestion dialog answers (`/pals theme`); null: dismissed.
+let asked: { question: string; options: string[] } | null = null
+let answer: string | null = null
+let isAsking = false
+
+/** The permission check the engine makes of a call, answered `ask`. */
+async function askFor($: { tool: { check: (input: never) => Promise<unknown> } }, input: unknown): Promise<void> {
+  isAsking = true
+  try {
+    await $.tool.check(input as never)
+  } finally {
+    isAsking = false
+  }
+}
+// The id of the last tool call the host ran, for a check about it.
+let lastCallId = ''
+// How a call the host runs ends: denied, or run with or without an error.
+let ends: 'deny' | 'ok' | 'fail' = 'deny'
+
+function host(on: On, stored: Record<string, unknown> = {}) {
+  rows = []
+  asked = null
+  answer = null
+  ends = 'deny'
+  const clock = mock.clock(on, { now: 1_000_000 })
+  mock.store(on, stored)
+  mock.env(on, { LANG: 'zh_CN.UTF-8' })
+  on('command.register', ($, e) => ({ value: { command: e.name } }))
+  on('config.set', ($, e) => {
+    rows.push([e.key, e.value])
+    return { value: e.value }
+  })
+  on('session.start', ($, e) => ({ cwd: e.cwd }))
+  on('turn.start', ($, e) => ({ turnId: e.turnId }))
+  on('turn.complete', () => ({ text: 'ok' }))
+  // The engine's verdict: a check a test raises asks. The check the kit raises for each call
+  // passes, as an ask there, with no person to answer, would refuse the call.
+  on('tool.check', () => ({ decision: isAsking ? 'ask' : 'allow' }))
+  on('tool.call', async ($, e) => {
+    if (e.tool === 'AskUserQuestion') {
+      const q = e.questions[0]!
+      asked = { question: q.question, options: q.options.map(o => o.label) }
+      if (answer === null) return { deny: 'dismissed' }
+      return { result: { questions: e.questions, answers: { [q.question]: answer } }, text: answer }
+    }
+    lastCallId = e.tool_use_id
+    await clock.sleep(1000)
+    if (ends === 'deny') return { deny: 'test' }
+    return ends === 'fail' ? { result: 'out', text: 'out', isError: true } : { result: 'out', text: 'out' }
+  })
+  on('ui.render', ($, e) => {
+    const { Box, Text } = $.ui.resolve(e)
+    return (
+      <Box key="core">
+        <Text>Sauteing…</Text>
+      </Box>
+    )
+  })
+  return clock
+}
+
+// k-mods 한국 수정판은 language·companion·footerButton 기본값을 바꿨다. 원본 테스트는 원본 기본값으로 돌린다.
+const UPSTREAM = { language: 'auto', companion: true, footerButton: true }
+
+test('every scene, finale and companion row fills exactly its width, every frame', { options: UPSTREAM }, async () => {
+  const acts: Act[] = ['think', 'tool', 'ask', 'say']
+  for (const name of THEME_NAMES) {
+    const theme = THEMES[name]
+    for (const w of [16, 37, 80, 160]) {
+      for (let t = 0; t < 150; t += 7) {
+        const scene = theme.scene(t, w, acts[t % 4]!)
+        expect(scene).toHaveLength(theme.rows)
+        const rows = [
+          ...scene,
+          ...finaleScene(theme, 'answer', '完成 · 12s', t, w),
+          ...finaleScene(theme, 'error', 'x', t, w),
+          ...petRow(theme, { state: acts[t % 4]!, bubble: t % 2 ? 'Bash: npm test' : '', stats: 'Lv.3 ♥12' }, t, w, t % 3),
+          ...petRow(theme, { state: 'sleep', bubble: 'Zzz…', stats: 'Lv.1 ♥0' }, t, w, 0),
+        ]
+        for (const row of rows) {
+          expect(textWidth(segments(row).map(s => s.text).join(''))).toBe(w)
+        }
+      }
+    }
+    for (const frames of Object.values(theme.sprite)) expect(frames.length).toBeGreaterThan(0)
+  }
+})
+
+test('helpers', { options: UPSTREAM }, async () => {
+  expect(formatDuration(12_400)).toBe('12s')
+  expect(formatDuration(185_000)).toBe('3m 05s')
+  expect(formatDuration(3_720_000)).toBe('1h 02m')
+  expect([12_400, 185_000, 3_720_000].map(formatDurationKo)).toEqual(['12초', '3분 05초', '1시간 02분'])
+  for (let i = 0; i < 50; i++) expect(THEME_NAMES).toContain(pickRandom(i))
+  expect([0, 1, 2, 8, 18].map(levelOf)).toEqual([1, 1, 2, 3, 4])
+  expect(toolLabel({ tool: 'Bash', command: 'npm test\nnpm run lint' })).toBe('Bash: npm test')
+  expect(toolLabel({ tool: 'Edit', file_path: '/a/b/themes.ts' })).toBe('Edit: themes.ts')
+  expect(toolLabel({ tool: 'mcp__github__create_issue' })).toBe('create_issue')
+  expect(newsOf('npm test', false)).toBe('testPass')
+  expect(newsOf('cd a && CI=1 pytest -q', true)).toBe('testFail')
+  expect(newsOf('go test ./...', false)).toBe('testPass')
+  expect(newsOf('git -C repo commit -m "x"', false)).toBe('commit')
+  expect(newsOf('git commit -m x', true)).toBe(null)
+  expect(newsOf('git commit --dry-run', false)).toBe(null)
+  expect(newsOf('cat test.log', false)).toBe(null)
+  expect(newsOf('npm run lint', false)).toBe(null)
+  expect(toolLabel({ tool: 'Agent', description: 'Study HUD mods', prompt: '…' })).toBe('Agent: Study HUD mods')
+  expect(busyLabel(['Agent: a', 'Agent: b', 'Agent: c'])).toBe('Agent ×3')
+  expect(busyLabel(['Read: a.ts', 'Agent: b'])).toBe('Agent: b')
+  expect(busyLabel([])).toBe(undefined)
+})
+
+// k-mods 수정: 펫을 꺼도 스피너 줄 앞에 마스코트를 그리지 않는다 (줄 앞 들여쓰기가 생겨서). 엔진의 줄을 그대로 둔다.
+test('k-mods: no mascot in front of the engine line, even with the companion off', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.command.run({ ...RUN, command: 'pals', args: 'chomp' })
+  const plain = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...SPINNER })
+  expect(await plain.findAll({ type: 'Client' })).toHaveLength(0)
+  await plain.unmount()
+
+  await $.command.run({ ...RUN, command: 'pals', args: 'companion off' })
+  for (const surface of ['terminal', 'desktop'] as const) {
+    const ui = await $.ui.mount({ plugin: 'pixel-pals', surface, ...SPINNER })
+    expect(await ui.find({ type: 'Text', text: 'Sauteing…' })).toBeDefined()
+    expect(await ui.findAll({ type: 'Client' })).toHaveLength(0)
+    await ui.unmount()
+  }
+})
+
+test('band plays the scene and the companion while working, keeps other bands', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.command.run({ ...RUN, command: 'pals', args: 'thunder' })
+  await $.turn.start({ text: 'hi', turnId: 't1' })
+
+  for (const surface of ['terminal', 'desktop'] as const) {
+    const ui = await $.ui.mount({ plugin: 'pixel-pals', surface, ...BAND })
+    expect(await ui.find({ type: 'Text', text: 'Sauteing…' })).toBeDefined()
+    const first = await drawn(ui, 'work')
+    expect(first).toContain('SCORE 000000')
+    expect(await said(ui)).toContain('Lv.1 ♥0')
+    expect(await ui.findAll({ type: 'Client' })).toHaveLength(2)
+    // Thinking is the engine's line to say; the bubble stays quiet.
+    expect(await ui.findAll({ type: 'Text' })).toHaveLength(2)
+    await ui.advance(STAGE_MS * 5)
+    expect(await drawn(ui, 'work')).not.toBe(first)
+    await ui.unmount()
+  }
+
+  await $.command.run({ ...RUN, command: 'pals', args: 'stage off' })
+  const off = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await off.findAll({ type: 'Client' })).toHaveLength(1)
+  expect(await said(off)).toContain('Lv.1 ♥0')
+  await off.unmount()
+})
+
+test('a short band gets the pet in one row', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  const ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND, props: { ...BAND.props, maxRows: 2 } })
+  expect(await ui.findAll({ type: 'Client' })).toHaveLength(0)
+  expect(await said(ui)).toContain('Lv.1 ♥0')
+  await ui.unmount()
+})
+
+test('reduced motion draws one still frame', { options: { ...UPSTREAM, reducedMotion: true } }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.command.run({ ...RUN, command: 'pals', args: 'thunder' })
+  await $.turn.start({ text: 'hi', turnId: 't1' })
+  const ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  const still = await drawn(ui, 'work')
+  expect(still).toContain('SCORE 000000')
+  await ui.advance(STAGE_MS * 5)
+  expect(await drawn(ui, 'work')).toBe(still)
+  await ui.unmount()
+})
+
+test('the companion follows tool calls and permission prompts', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.turn.start({ text: 'hi', turnId: 't1' })
+
+  const call = $.tool.call({ tool: 'Bash', command: 'npm test' })
+  await clock.settle()
+  let ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).toContain('Bash: npm test')
+  await ui.unmount()
+
+  // The check asks; the pet says so only once the ask has stood a moment.
+  await askFor($, { tool: 'Bash', input: { command: 'npm test' }, tool_use_id: lastCallId })
+  ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).not.toContain('等你确认')
+  await ui.unmount()
+  await clock.advance(600)
+  ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).toContain('等你确认一下～')
+  await ui.unmount()
+
+  await clock.advance(1000)
+  await call
+  ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).not.toContain('Bash: npm test')
+  expect(await said(ui)).not.toContain('等你确认')
+  await ui.unmount()
+})
+
+test('tests and commits Claude runs: a word from the pet, xp for good news', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.turn.start({ text: 'hi', turnId: 't1' })
+  ends = 'ok'
+  const pass = $.tool.call({ tool: 'Bash', command: 'npm test' })
+  await clock.advance(1000)
+  await pass
+  let ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).toContain('测试通过啦！')
+  expect(await said(ui)).toContain('Lv.1 ♥0')
+  await ui.unmount()
+  ends = 'fail'
+  const fail = $.tool.call({ tool: 'Bash', command: 'pytest' })
+  await clock.advance(1000)
+  await fail
+  ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).toContain('测试没过')
+  await ui.unmount()
+  await clock.advance(4000)
+  ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).not.toContain('测试没过')
+  await ui.unmount()
+  // One xp for the tests that passed, none for those that failed.
+  expect((await $.command.run({ ...RUN, command: 'pals', args: '' })).text).toContain('经验 1 ·')
+})
+
+test('an ask the mode settles at once never reaches the pet', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.turn.start({ text: 'hi', turnId: 't1' })
+  const call = $.tool.call({ tool: 'Bash', command: 'npm test' })
+  await clock.settle()
+  // A query (no call id) and a call already over: neither is the person's to answer.
+  await askFor($, { tool: 'Bash', input: { command: 'ls' } })
+  await clock.advance(1000)
+  await call
+  await askFor($, { tool: 'Bash', input: { command: 'npm test' }, tool_use_id: lastCallId })
+  await clock.advance(600)
+  const ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).not.toContain('等你确认')
+  await ui.unmount()
+})
+
+test('a finished turn plays the finale, then the companion waits; a click pats it', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.turn.start({ text: 'hi', turnId: 't1' })
+  await $.turn.complete(DONE)
+
+  const ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...IDLE })
+  expect(await drawn(ui, 'finale-t1')).toContain('完成 · 12s')
+  await ui.unmount()
+
+  await clock.advance(FINALE_MS)
+  const idle = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...IDLE })
+  expect(await idle.findAll({ type: 'Client' })).toHaveLength(1)
+  expect(await said(idle)).toContain('做完啦，快看看！')
+  expect(await said(idle)).toContain('Lv.1 ♥0')
+  await idle.post({ pat: true }, { in: 'pet' })
+  expect(await said(idle)).toContain('Lv.1 ♥1')
+  // A pat floats pixel hearts over the pet.
+  expect(await drawn(idle, 'pet')).toMatch(/#ff6b9d|#ff8fab/)
+  await idle.unmount()
+
+  expect((await $.command.run({ ...RUN, command: 'pals', args: 'pet' })).text).toContain('♥2')
+
+  await $.command.run({ ...RUN, command: 'pals', args: 'companion off' })
+  const none = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...IDLE })
+  expect(await none.findAll({ type: 'Client' })).toHaveLength(0)
+  await none.unmount()
+})
+
+test('/pals switches, hides and reports', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+
+  expect((await $.command.run({ ...RUN, command: 'pals', args: 'thunder' })).text).toBe('已切换到 thunder')
+  const status = (await $.command.run({ ...RUN, command: 'pals', args: '' })).text
+  expect(status).toContain('当前主题：thunder')
+  expect(status).toContain('thunder · Lv.1 · 经验 0 · ♥0')
+  expect((await $.command.run({ ...RUN, command: 'pals', args: 'nyancat' })).text).toContain('没有叫 nyancat 的主题')
+  expect((await $.command.run({ ...RUN, command: 'pals', args: 'random' })).text).toContain('每个会话随机一个主题')
+
+  expect((await $.command.run({ ...RUN, command: 'pals', args: 'off' })).text).toBe('运行动画已关闭')
+  const ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...SPINNER })
+  expect(await ui.findAll({ type: 'Text' })).toHaveLength(1)
+  await ui.unmount()
+  const band = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...IDLE })
+  expect(await band.findAll({ type: 'Client' })).toHaveLength(0)
+  await band.unmount()
+})
+
+test('/pals theme asks which: an offered option, one typed under Other, or dismissed', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.command.run({ ...RUN, command: 'pals', args: 'chomp' })
+
+  answer = 'random'
+  expect((await $.command.run({ ...RUN, command: 'pals', args: 'theme' })).text).toContain('每个会话随机一个主题')
+  expect(asked?.question).toContain('换哪个主题')
+  expect(asked?.options).toHaveLength(4)
+  expect(asked?.options[0]).toBe('random')
+
+  answer = ' Thunder '
+  expect((await $.command.run({ ...RUN, command: 'pals', args: 'theme' })).text).toBe('已切换到 thunder')
+  expect(asked?.options).not.toContain('thunder')
+  expect(rows).toEqual([
+    ['pixel-pals.theme', 'chomp'],
+    ['pixel-pals.theme', 'random'],
+    ['pixel-pals.theme', 'thunder'],
+  ])
+
+  answer = 'nyancat'
+  expect((await $.command.run({ ...RUN, command: 'pals', args: 'theme' })).text).toContain('没有叫 nyancat 的主题')
+
+  answer = null
+  expect((await $.command.run({ ...RUN, command: 'pals', args: 'theme' })).text).toContain('当前主题：thunder')
+  expect(rows).toHaveLength(3)
+})
+
+test('a subagent\'s permission ask shows too, until its call ends', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.turn.start({ text: 'hi', turnId: 't1' })
+  const call = $.tool.call({ tool: 'Bash', command: 'rm -rf build', agentId: 'a1' } as never)
+  await clock.settle()
+  await askFor($, { tool: 'Bash', input: { command: 'rm -rf build' }, tool_use_id: lastCallId })
+  await clock.advance(600)
+  let ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).toContain('等你确认一下～')
+  await ui.unmount()
+  await clock.advance(1000)
+  await call
+  ui = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...BAND })
+  expect(await said(ui)).not.toContain('等你确认')
+  await ui.unmount()
+})
+
+test('/pals arguments', { options: UPSTREAM }, async () => {
+  expect(parseCommand('')).toEqual({ kind: 'status' })
+  expect(parseCommand(' OFF ')).toEqual({ kind: 'visible', isOn: false })
+  expect(parseCommand('stage on')).toEqual({ kind: 'stage', isOn: true })
+  expect(parseCommand('stage')).toEqual({ kind: 'unknown', name: 'stage' })
+  expect(parseCommand('companion off')).toEqual({ kind: 'companion', isOn: false })
+  expect(parseCommand('preview')).toEqual({ kind: 'preview', theme: null })
+  expect(parseCommand('preview nyan')).toEqual({ kind: 'preview', theme: 'nyan' })
+  expect(parseCommand('preview x')).toEqual({ kind: 'unknown', name: 'x' })
+  expect(parseCommand('Random')).toEqual({ kind: 'theme', theme: 'random' })
+  expect(parseCommand('chomp')).toEqual({ kind: 'theme', theme: 'chomp' })
+  expect(parseCommand('theme')).toEqual({ kind: 'pick' })
+  expect(parseCommand('theme tales')).toEqual({ kind: 'theme', theme: 'tales' })
+  expect(parseCommand('theme random')).toEqual({ kind: 'theme', theme: 'random' })
+  expect(parseCommand('theme x')).toEqual({ kind: 'unknown', name: 'x' })
+})
+
+test('/pals writes its /config rows, once per change', { options: { ...UPSTREAM, theme: 'sparky' } }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  await $.command.run({ ...RUN, command: 'pals', args: 'bluecat' })
+  await $.command.run({ ...RUN, command: 'pals', args: 'stage off' })
+  await $.command.run({ ...RUN, command: 'pals', args: 'stage off' })
+  await $.command.run({ ...RUN, command: 'pals', args: 'companion off' })
+  await $.command.run({ ...RUN, command: 'pals', args: 'off' })
+  expect(rows).toEqual([
+    ['pixel-pals.theme', 'bluecat'],
+    ['pixel-pals.stage', false],
+    ['pixel-pals.companion', false],
+    ['pixel-pals.visible', false],
+  ])
+})
+
+test('settings older versions kept in the store move to /config rows', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on, { theme: 'chomp', isStageOff: true, isCompanionOff: false, isHidden: false })
+  await $.session.start(START)
+  await clock.settle()
+  expect(rows).toEqual([
+    ['pixel-pals.theme', 'chomp'],
+    ['pixel-pals.visible', true],
+    ['pixel-pals.stage', false],
+    ['pixel-pals.companion', true],
+  ])
+  expect((await $.command.run({ ...RUN, command: 'pals', args: '' })).text).toContain('当前主题：chomp')
+  // A reload (a row changed) keeps the session's theme; the store holds nothing to move again.
+  await $.session.start(START)
+  await clock.settle()
+  expect(rows).toHaveLength(4)
+})
+
+test('random keeps the theme it drew this session across a reload', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  const first = (await $.command.run({ ...RUN, command: 'pals', args: '' })).text?.split('\n')[0]
+  await clock.advance(12_345)
+  await $.session.start(START)
+  await clock.settle()
+  expect((await $.command.run({ ...RUN, command: 'pals', args: '' })).text?.split('\n')[0]).toBe(first)
+})
+
+test('the footer button turns the animations off and on, keeping the modes beneath it', { options: UPSTREAM }, async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  const footer = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', component: 'SessionMode', props: { modes: ['focus'] } })
+  expect(await footer.find({ type: 'Button', key: 'pals-toggle' })).toBeDefined()
+  await footer.press({ key: 'pals-toggle' })
+  const band = await $.ui.mount({ plugin: 'pixel-pals', surface: 'terminal', ...IDLE })
+  expect(await band.findAll({ type: 'Client' })).toHaveLength(0)
+  await band.unmount()
+  await footer.press({ key: 'pals-toggle' })
+  expect(rows).toEqual([
+    ['pixel-pals.visible', false],
+    ['pixel-pals.visible', true],
+  ])
+  await footer.unmount()
+})
+
+test('k-mods defaults: /pals replies in Korean', async ($, on) => {
+  const clock = host(on)
+  await $.session.start(START)
+  await clock.settle()
+  const reply = await $.command.run({ ...RUN, command: 'pals', args: '' })
+  expect(String(reply.text)).toContain('현재 테마')
+})
+
+test('pixel-pals: the six curated scenes and tales, all in random', () => {
+  expect([...THEME_NAMES]).toEqual(['clawd', 'thunder', 'chomp', 'sparky', 'bluecat', 'nyan', 'tales'])
+  expect(RANDOM_POOL).toEqual([...THEME_NAMES])
+  for (let seed = 0; seed < 50; seed++) expect(RANDOM_POOL).toContain(pickRandom(seed))
+})
