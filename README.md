@@ -23,6 +23,21 @@ tools/
   deploy_hub.py             dogebi.github.io/k-mods/ 로 Git Data API 배포 + 바이트 대조
 ```
 
+## 디자인 토큰 (design-tokens.json)
+
+`design-tokens.json` 은 1in8b.life 에서 **실측 추출**한 값입니다 — `/a/s.9514f42e86.css`(3059규칙)의
+`:root` 선언을 CDP 로 그대로 읽었고, 손으로 옮긴 근사값이 아닙니다.
+
+```json
+"light": { "paper": "#EBF0ED", "card": "#F7FAF8", "rule": "#C7D2CE",
+           "accent": "#8C1D3C", "stamp": "#0F6E68", "ink": "#13212A" }
+"dark":  { "paper": "#0D1316", "card": "#141D21", "accent": "#E2678A",
+           "stamp": "#4CC0AF", "ink": "#E1E9E6" }
+"font":  { "display": "Hahmlet", "body": "IBM Plex Sans KR 15px/1.6", "mono": "IBM Plex Mono" }
+"surface": { "panel": "4px · 1px rule · 그림자 없음 · padding 16px",
+             "chip": "999px · 6px 12px · 13.5px", "bar": "8px 높이 · rule2 바탕" }
+```
+
 ## 테마 (paper.css)
 
 원본은 CSS 변수(`--bg/--surface/--ink/--accent/--line/…`)로 짜여 있어서, 변수와 컴포넌트만
@@ -35,9 +50,9 @@ tools/
 | 본문 잉크 | `#13212A` / 보조 `#4A5A61` / 흐림 `#5F6E72` |
 | 강조(크림슨) | `#8C1D3C` — 링크, 호버, 현재 위치 |
 | 도장(청록) | `#0F6E68` — 점 표식, 포커스 링, 원본 배지 |
-| 머리글자 | `Noto Serif KR` (없으면 나눔명조·바탕·AppleMyungjo) |
-| 숫자·코드 | `JetBrains Mono` 유지 |
-| 다크 | `#12171A` 바탕 / `#1A2024` 표면 / 크림슨 `#D8677F` |
+| 머리글자 | `Hahmlet` (없으면 Noto Serif KR·나눔명조·바탕) |
+| 본문/숫자 | `IBM Plex Sans KR` 15px/1.6 · `IBM Plex Mono` |
+| 다크 | `#0D1316` 바탕 / `#141D21` 표면 / 크림슨 `#E2678A` / 청록 `#4CC0AF` |
 
 원본의 다크 테마 토글, 언어 전환(KO/EN), 카테고리 필터, 미리보기 영상은 그대로 동작합니다.
 
