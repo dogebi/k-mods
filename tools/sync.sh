@@ -33,6 +33,15 @@ python3 "$ROOT/tools/apply_theme.py" || { say "apply_theme failed"; exit 1; }
 # 3b) 머리글 GitHub 아이콘 → 우리 저장소 (멱등)
 python3 "$ROOT/tools/patch_links.py" || { say "patch_links failed"; exit 1; }
 
+# 3c) 언어 선택기 4개 + zh/ja 트리 재생성 (사전이 있으면)
+python3 "$ROOT/tools/add_locales.py" || say "add_locales failed"
+if [ -d "$ROOT/data/i18n/out/zh" ] && [ -d "$ROOT/data/i18n/out/ja" ]; then
+  python3 "$ROOT/tools/i18n_build.py" || say "i18n_build failed"
+fi
+
+# 3d) sitemap (ko/en/zh/ja + hreflang)
+python3 "$ROOT/tools/make_sitemap.py" || say "sitemap failed"
+
 # 4) 변경 확인
 if git diff --quiet && git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
   say "no upstream changes"

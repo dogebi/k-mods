@@ -1,0 +1,1154 @@
+{
+ "ids": [
+  957,
+  958,
+  959,
+  960,
+  961,
+  962,
+  963,
+  964,
+  965,
+  966,
+  967,
+  968,
+  969,
+  970,
+  971,
+  972,
+  973,
+  974,
+  975,
+  976,
+  977,
+  978,
+  979,
+  980,
+  981,
+  982,
+  983,
+  984,
+  985,
+  986,
+  987,
+  988,
+  989,
+  990,
+  991,
+  992,
+  993,
+  994,
+  995,
+  996,
+  997,
+  998,
+  999,
+  1000,
+  1001,
+  1002,
+  1003,
+  1004,
+  1005,
+  1006,
+  1007,
+  1008,
+  1009,
+  1010,
+  1011,
+  1012,
+  1013,
+  1014,
+  1015,
+  1016,
+  1017,
+  1018,
+  1019,
+  1020,
+  1021,
+  1022,
+  1023,
+  1024,
+  1025,
+  1026,
+  1027,
+  1028,
+  1029,
+  1030,
+  1031,
+  1032,
+  1033,
+  1034,
+  1035,
+  1036,
+  1037,
+  1038,
+  1039,
+  1040,
+  1041,
+  1042,
+  1043,
+  1044,
+  1045,
+  1046,
+  1047,
+  1048,
+  1049,
+  1050,
+  1051,
+  1052,
+  1053,
+  1054,
+  1055,
+  1056,
+  1057,
+  1058,
+  1059,
+  1060,
+  1061,
+  1062,
+  1063,
+  1064,
+  1065,
+  1066,
+  1067,
+  1068,
+  1069,
+  1070,
+  1071,
+  1072,
+  1073,
+  1074,
+  1075,
+  1076,
+  1077,
+  1078,
+  1079,
+  1080,
+  1081,
+  1082,
+  1083,
+  1084,
+  1085,
+  1086,
+  1087,
+  1088,
+  1089,
+  1090,
+  1091,
+  1092,
+  1093,
+  1094,
+  1095,
+  1096,
+  1097,
+  1098,
+  1099,
+  1100,
+  1101,
+  1102,
+  1103,
+  1104,
+  1105,
+  1106,
+  1107,
+  1108,
+  1109,
+  1110,
+  1111,
+  1112,
+  1113,
+  1114,
+  1115,
+  1116,
+  1117,
+  1118,
+  1119,
+  1120
+ ],
+ "items": [
+  {
+   "i": 957,
+   "ko": "2026-10-06 · validate, 코드 읽음, 테스트, 실사용 확인",
+   "ctx": "/mods/ctx-strip",
+   "n": 5
+  },
+  {
+   "i": 958,
+   "ko": "k-mods 오리지널",
+   "ctx": "/mods/ctx-strip",
+   "n": 6
+  },
+  {
+   "i": 959,
+   "ko": "컨텍스트 막대 (ctx-strip) · Claude Code mod · k-mods",
+   "ctx": "/mods/ctx-strip",
+   "n": 1
+  },
+  {
+   "i": 960,
+   "ko": "README에 'claude -p, 데스크톱 앱, 모바일에서는 아무것도 그려지지 않는다'고 명시되어 있어요(terminal 전용)",
+   "ctx": "/mods/diff-invaders",
+   "n": 1
+  },
+  {
+   "i": 961,
+   "ko": "마우스 없이 방향키(←→/ad)와 스페이스만으로 플레이 가능해요(클릭도 지원)",
+   "ctx": "/mods/diff-invaders",
+   "n": 1
+  },
+  {
+   "i": 962,
+   "ko": "최고 점수만 $.store(plugin 전용 저장소)에 남기고, 그 외 기기 밖 전송은 없어요",
+   "ctx": "/mods/diff-invaders",
+   "n": 2
+  },
+  {
+   "i": 963,
+   "ko": "작업 끝 알림 (done-alarm) · Claude Code mod · k-mods",
+   "ctx": "/mods/done-alarm",
+   "n": 1
+  },
+  {
+   "i": 964,
+   "ko": "2026-10-06 @ f31daca · validate, 코드 읽음",
+   "ctx": "/mods/flightdeck",
+   "n": 1
+  },
+  {
+   "i": 965,
+   "ko": "2026-10-06 @ a209ad5 · validate, 코드 읽음",
+   "ctx": "/mods/gfm-render",
+   "n": 1
+  },
+  {
+   "i": 966,
+   "ko": "Mermaid 상자 안의 한글 라벨은 글자 폭을 1칸으로 세서 테두리가 어긋나요(원본 문제). 라벨은 영어로 짧게 쓰면 깔끔해요.",
+   "ctx": "/mods/gfm-render",
+   "n": 1
+  },
+  {
+   "i": 967,
+   "ko": "같은 스크립트 실행에도 들어가요. 끄려면",
+   "ctx": "/mods/gfm-render",
+   "n": 1
+  },
+  {
+   "i": 968,
+   "ko": "를 끄세요(그리기는 그대로예요).",
+   "ctx": "/mods/gfm-render",
+   "n": 1
+  },
+  {
+   "i": 969,
+   "ko": "세션을 시작할 때마다 Claude에게 경고문·체크리스트·Mermaid를 쓸 수 있다는 짧은 안내문(약 250토큰)을 넣어요. 도움이 될 때만, 사용자의 서식 지시를 먼저 따르라고 적혀 있어요.",
+   "ctx": "/mods/gfm-render",
+   "n": 1
+  },
+  {
+   "i": 970,
+   "ko": "테마 분류의 다른 mod",
+   "ctx": "/mods/gfm-render",
+   "n": 3
+  },
+  {
+   "i": 971,
+   "ko": "2026-10-06 @ 4d6876e · validate, 코드 읽음",
+   "ctx": "/mods/github-issues",
+   "n": 1
+  },
+  {
+   "i": 972,
+   "ko": "GitHub CLI(gh), gh auth login으로 로그인 필요",
+   "ctx": "/mods/github-issues",
+   "n": 1
+  },
+  {
+   "i": 973,
+   "ko": "gh가 없으면 설치·로그인 안내 메시지만 보여줘요.",
+   "ctx": "/mods/github-issues",
+   "n": 1
+  },
+  {
+   "i": 974,
+   "ko": "명시된 최소 Claude Code 버전은 README에 없었어요(일반적으로 2.1.287+ 전제인 mods 공통 틀을 따라요).",
+   "ctx": "/mods/github-issues",
+   "n": 1
+  },
+  {
+   "i": 975,
+   "ko": "Slack에는 '나를 멘션' 전용 검색 필터가 없어서, 로그인한 사용자의 Slack id를 최초 1회 slack_read_user_profile로 조회해 메모리에만 보관하고 이후 검색 키워드로 재사용해요(디스크 저장·외부 전송 없음, README에도 명시된 동작).",
+   "ctx": "/mods/glance",
+   "n": 1
+  },
+  {
+   "i": 976,
+   "ko": "claude.ai Google Calendar 커넥터",
+   "ctx": "/mods/glance",
+   "n": 1
+  },
+  {
+   "i": 977,
+   "ko": "claude.ai Linear 커넥터",
+   "ctx": "/mods/glance",
+   "n": 1
+  },
+  {
+   "i": 978,
+   "ko": "claude.ai Slack 커넥터",
+   "ctx": "/mods/glance",
+   "n": 1
+  },
+  {
+   "i": 979,
+   "ko": "gh CLI 로그인",
+   "ctx": "/mods/glance",
+   "n": 1
+  },
+  {
+   "i": 980,
+   "ko": "원저장소 README가 이 mod를 '🔧 My setup (fork and adapt)' 섹션에 두고 '내 도구와 규칙을 중심으로 만들었으니 포크해서 자기 것으로 바꾸라'고 명시해요. gh + Google Calendar + Linear + Slack 네 가지를 모두 쓰는 팀에서만 전체 기능이 살아나고, 하나라도 없으면 그 칸만 조용히 빠져요. 범용성은 낮지만 해당 스택을 쓰는 한국 개발팀에는 실제로 유용하다고 판단해 등록해요.",
+   "ctx": "/mods/glance",
+   "n": 1
+  },
+  {
+   "i": 981,
+   "ko": "(claude-hud의 --extra-cmd, 임의 쉘 명령 실행)는 기본 빈 값이고, 쓰려면 옵션 설정과",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 982,
+   "ko": "(기본 5턴, 0으로 끌 수 있음)마다 세션 작업을 한 줄로 요약하는 모델 호출이 있어요. 대화를 포크해 프롬프트 캐시를 재사용하는 호출이라 비용은 적지만 사용자 사용량을 소모해요.",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 983,
+   "ko": ")의",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 984,
+   "ko": "2026-10-06 @ 8fb6f67 · validate, 코드 읽음",
+   "ctx": "/mods/hud",
+   "n": 4
+  },
+  {
+   "i": 985,
+   "ko": "Nerd Font (nerd·powerline 테마에서만 필요)",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 986,
+   "ko": "[jarrodwatts/claude-hud](https://github.com/jarrodwatts/claude-hud) 0.10.0을 mod로 옮긴 것으로, 별도 LICENSE.claude-hud(MIT, Jarrod Watts)로 원저작권을 유지해요. 화면 언어는 k-mods의",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 987,
+   "ko": "mod와 함께 쓰면 pet이 HUD 옆(below 위치일 때)에 표시돼요. k-mods의 pixel-pals와는 연동되지 않고, 없어도 정상 동작해요.",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 988,
+   "ko": "가 아니라 claude-hud 자신의 설정 파일(",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 989,
+   "ko": "같은 작성자(hoobnn)의 원본",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 990,
+   "ko": "계정 인증 방식·이메일 일부를 보여주는 기능(claude-hud의 showAuth/showAuthUser)과 다른 로컬 도구로 사용량을 공유하는 파일(externalUsagePath/externalUsageWritePath)은 claude-hud 자체 설정 파일에서만 켤 수 있고 둘 다 기본값이 꺼짐이에요.",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 991,
+   "ko": "필드를 따라요(기본값 en). plugin.json userConfig에 language 옵션 자체가 없어 여기서는 language 설정을 권장하지 않았어요.",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 992,
+   "ko": "환경 변수를 모두 켜야 해요.",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 993,
+   "ko": "2026-10-06 @ 1544b15 · validate, 코드 읽음",
+   "ctx": "/mods/image-view",
+   "n": 1
+  },
+  {
+   "i": 994,
+   "ko": "/jev-skill-suggestion:setup은 mod가 직접 설정 파일을 쓰지 않고, Claude에게 변경 계획을 프롬프트로 건네 Claude의 Edit 도구로 사용자 확인을 거쳐 수정하게 해요",
+   "ctx": "/mods/jev-skill-suggestion",
+   "n": 1
+  },
+  {
+   "i": 995,
+   "ko": "API 키(typesafeApiKey 또는 gatewayApiKey)를 넣으면 프롬프트 전문과 후보 스킬 이름·설명, 선별된 스킬 SKILL.md 앞부분이 TypeSafe 서버로 전송돼요(저자가 코드 주석·README에 직접 명시한 사실)",
+   "ctx": "/mods/jev-skill-suggestion",
+   "n": 1
+  },
+  {
+   "i": 996,
+   "ko": "모든 실패 경로가 fail-open이에요. 요청 실패나 타임아웃(기본 800ms)이면 제안 없이 프롬프트를 그대로 통과시켜요",
+   "ctx": "/mods/jev-skill-suggestion",
+   "n": 1
+  },
+  {
+   "i": 997,
+   "ko": "키가 없으면 Claude Code 자체 모델 분류기($.model.classify)를 프롬프트마다 호출해 사용자 Claude 사용량을 소모해요",
+   "ctx": "/mods/jev-skill-suggestion",
+   "n": 1
+  },
+  {
+   "i": 998,
+   "ko": "2026-10-06 @ 7a19200 · validate, 코드 읽음",
+   "ctx": "/mods/ko-ui",
+   "n": 1
+  },
+  {
+   "i": 999,
+   "ko": "Claude Code 2.1.287 이상이 필요해요. 2.1.285에서는",
+   "ctx": "/mods/ko-ui",
+   "n": 1
+  },
+  {
+   "i": 1000,
+   "ko": "Spinner 단어 번역은 terminal 화면에서만 적용돼요(desktop은 원문 유지, 나머지 번역은 desktop에서도 적용돼요).",
+   "ctx": "/mods/ko-ui",
+   "n": 1
+  },
+  {
+   "i": 1001,
+   "ko": "권한 확인 창, 환영 화면, 선택지 값, 에러 메시지, 프롬프트 아래 알약 문구는 훅이 없거나 번역하면 다른 정보가 사라져서 원문 그대로예요.",
+   "ctx": "/mods/ko-ui",
+   "n": 1
+  },
+  {
+   "i": 1002,
+   "ko": "로 확인해",
+   "ctx": "/mods/ko-ui",
+   "n": 1
+  },
+  {
+   "i": 1003,
+   "ko": "모델 호출·네트워크 요청이 전혀 없는 고정 사전(dict.json) 치환 방식이라 토큰을 쓰지 않아요.",
+   "ctx": "/mods/ko-ui",
+   "n": 1
+  },
+  {
+   "i": 1004,
+   "ko": "번역 안 된 새 문구는",
+   "ctx": "/mods/ko-ui",
+   "n": 1
+  },
+  {
+   "i": 1005,
+   "ko": "에 직접 추가할 수 있어요(최대 200개까지 기록).",
+   "ctx": "/mods/ko-ui",
+   "n": 1
+  },
+  {
+   "i": 1006,
+   "ko": "환경 변수를 켜야 로드돼요.",
+   "ctx": "/mods/ko-ui",
+   "n": 1
+  },
+  {
+   "i": 1007,
+   "ko": "묶음 분류의 다른 mod",
+   "ctx": "/mods/korean-pack",
+   "n": 3
+  },
+  {
+   "i": 1008,
+   "ko": "묶음은 아래 mod를 한 번에 설치해요. 권한은 각 mod를 따라가요.",
+   "ctx": "/mods/korean-pack",
+   "n": 3
+  },
+  {
+   "i": 1009,
+   "ko": "한국어 팩 (korean-pack) · Claude Code mod · k-mods",
+   "ctx": "/mods/korean-pack",
+   "n": 1
+  },
+  {
+   "i": 1010,
+   "ko": "함께 설치되는 mod",
+   "ctx": "/mods/korean-pack",
+   "n": 3
+  },
+  {
+   "i": 1011,
+   "ko": "2026-10-06 @ 1e6fef1 · validate, 코드 읽음",
+   "ctx": "/mods/linear-board",
+   "n": 1
+  },
+  {
+   "i": 1012,
+   "ko": "Linear API 키 (lin_api_...). /plugin configure 또는 LINEAR_API_KEY 환경 변수",
+   "ctx": "/mods/linear-board",
+   "n": 1
+  },
+  {
+   "i": 1013,
+   "ko": "2026-10-06 @ 629eb7d · validate, 코드 읽음",
+   "ctx": "/mods/linear-tickets",
+   "n": 1
+  },
+  {
+   "i": 1014,
+   "ko": "Linear MCP 서버 연결 (plugin.json 기본값 plugin:linear:linear)",
+   "ctx": "/mods/linear-tickets",
+   "n": 1
+  },
+  {
+   "i": 1015,
+   "ko": "메모장 (memo-pad) · Claude Code mod · k-mods",
+   "ctx": "/mods/memo-pad",
+   "n": 1
+  },
+  {
+   "i": 1016,
+   "ko": "모드 상점 (mod-store) · Claude Code mod · k-mods",
+   "ctx": "/mods/mod-store",
+   "n": 1
+  },
+  {
+   "i": 1017,
+   "ko": "2026-10-06 @ 534b16e · validate, 코드 읽음",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1018,
+   "ko": "5시간·7일 막대는 Claude 구독 사용자에게만 보여요. API 키로 쓰면 컨텍스트 막대만 보여요 (원본 README 기준, k-mods가 직접 확인한 건 아니에요).",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1019,
+   "ko": "가 없어서 자동으로 영어로 표시돼요. 번역 패치가 반영되기 전까지는",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1020,
+   "ko": "등)이어도 지원 목록 12개 언어에",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1021,
+   "ko": "류 환경변수가 하나도 없을 때만 내부적으로",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1022,
+   "ko": "를 1회 실행해 시스템 언어를 읽어요. 인자가 고정돼 있고 사용자 입력은 들어가지 않아요.",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1023,
+   "ko": "의 언어 선택지에도 한국어가 없어요.",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1024,
+   "ko": "터미널에서는 그려지지 않아요. Claude Code Desktop/VS Code/모바일 전용이고, CLI는 자체 상태 표시줄을 그대로 써요.",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1025,
+   "ko": "한국어 로캘(",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1026,
+   "ko": "한국어는 아직 지원 언어가 아니에요. 한국어 로캘에서도 영어로 표시돼요.",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1027,
+   "ko": ")를 지연 로딩 없이 등록해요. ModStage를 쓰지 않는 세션에도 도구 설명만큼 컨텍스트를 써요.",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1028,
+   "ko": "2026-10-27 @ e1d8522 · validate, 코드 읽음",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1029,
+   "ko": "Python 3.10 이상",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1030,
+   "ko": "도구 12개(",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1031,
+   "ko": "로 실행해요. ask에서도 실제로 묻는지는 각 CLI 설정에 따라 달라져요.",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1032,
+   "ko": "를 쓰라고 안내해요.",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1033,
+   "ko": "를 직접 실행하면 거절하고",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1034,
+   "ko": "세션 메시지",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1035,
+   "ko": "세션을 시작할 때마다 로컬 브리지(Python 프로그램)를 실행해요. Claude Code를 닫아도 브리지는 계속 실행되고, 끄려면",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1036,
+   "ko": "실행 방식 기본값은 ask(위험한 작업은 승인 요청)예요. auto는 에이전트의 승인 요청을 모두 자동으로 허용하고, Antigravity는",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1037,
+   "ko": "에이전트 CLI 1개 이상 설치, 로그인 (Codex, Grok, Muse, Antigravity, Kimi, Qwen Code, OpenCode 중)",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1038,
+   "ko": "은 그대로 실행돼요.",
+   "ctx": "/mods/modstage",
+   "n": 1
+  },
+  {
+   "i": 1039,
+   "ko": "같은 저장소의 where-am-i와 서로 인지하도록 짜여 있어요. next-steps 목록이 떠 있는 동안 where-am-i는 자기 '다음 할 일' 칸을 비워서 같은 내용이 중복 표시되지 않게 해요.",
+   "ctx": "/mods/next-steps",
+   "n": 1
+  },
+  {
+   "i": 1040,
+   "ko": "Spotify 데스크톱 앱",
+   "ctx": "/mods/now-playing",
+   "n": 1
+  },
+  {
+   "i": 1041,
+   "ko": "macOS가 아니면 session.start에서 uname -s로 확인해 명령 등록·폴링을 전혀 하지 않고 조용히 꺼져 있어요(Linux/Windows에서 아무 영향 없음).",
+   "ctx": "/mods/now-playing",
+   "n": 1
+  },
+  {
+   "i": 1042,
+   "ko": "2026-10-06 @ a71ba10 · validate, 코드 읽음",
+   "ctx": "/mods/paste-view",
+   "n": 1
+  },
+  {
+   "i": 1043,
+   "ko": "2026-10-11 @ 8fb6f67 · validate, 코드 읽음, 테스트",
+   "ctx": "/mods/pixel-pals",
+   "n": 1
+  },
+  {
+   "i": 1044,
+   "ko": "nyan·chomp·sparky·bluecat은 원작자가 '픽셀 오마주'라고 부른 장면이고, Clawd는 Anthropic 마스코트예요. 비공식 팬 작품이에요.",
+   "ctx": "/mods/pixel-pals",
+   "n": 1
+  },
+  {
+   "i": 1045,
+   "ko": "기본값이 한국어예요. /pals·/tales 응답과 피날레, Clawd 이야기의 캡션까지 한국어로 나와요(Clawd 이야기는 한국어·영어만).",
+   "ctx": "/mods/pixel-pals",
+   "n": 1
+  },
+  {
+   "i": 1046,
+   "ko": "명령은 /pals(테마·펫·끄기)와 /tales(Clawd 이야기의 데모·모자·calm 모드) 두 개예요. tales 미리 보기는 /tales demo로 해요.",
+   "ctx": "/mods/pixel-pals",
+   "n": 1
+  },
+  {
+   "i": 1047,
+   "ko": "원본 spinner의 15종 중 nyan·clawd·thunder·chomp·sparky·bluecat 6종만 남기고, clawd-tales를 7번째 테마 tales로 더했어요. random은 7종 중 턴마다 골라요. 시스템 소리를 읽던 audio 테마는 빼서 프로그램 실행(swiftc) 권한이 없어요.",
+   "ctx": "/mods/pixel-pals",
+   "n": 1
+  },
+  {
+   "i": 1048,
+   "ko": "원본 두 개를 합쳤어요: 장면·펫은 hoobnn의 spinner(hoobnn/hoobnn-agent-mods @ 8fb6f67), tales 테마는 plaxagoras의 clawd-tales(@ 89c7f95). 둘 다 MIT이고 원본 저작권 표기를 LICENSE·LICENSE-clawd-tales·NOTICE에 그대로 뒀어요.",
+   "ctx": "/mods/pixel-pals",
+   "n": 1
+  },
+  {
+   "i": 1049,
+   "ko": "터미널에서만 장면이 보여요. 데스크톱 앱에서는 tales 테마일 때만 띠가 그려져요.",
+   "ctx": "/mods/pixel-pals",
+   "n": 1
+  },
+  {
+   "i": 1050,
+   "ko": ")에 유튜브 링크·직접 오디오 URL·로컬 파일 경로를 한 줄씩 추가해요. mpv가 그 주소로 직접 접속해 재생할 뿐, 모드 자체가 다른 곳에 접속하지는 않아요.",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1051,
+   "ko": "2026-10-06 @ 6ebf729 · validate, 코드 읽음",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1052,
+   "ko": "Windows는 지원하지 않고 macOS에서만 테스트됐어요.",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1053,
+   "ko": "mpv (필수. 없으면 설치 안내만 뜨고 재생되지 않아요)",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1054,
+   "ko": "mpv 실행 인자 끝에",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1055,
+   "ko": "yt-dlp (유튜브 링크를 재생하려면 권장)",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1056,
+   "ko": "구분자가 없어서, 재생목록 줄이",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1057,
+   "ko": "로 시작하면 mpv 옵션(예:",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1058,
+   "ko": "로 임의 Lua 스크립트 로드)으로 해석될 수 있어요. 재생목록은 본인이 직접 적는 로컬 파일이라 위험은 낮지만, 남이 준 재생목록 줄을 그대로 붙여넣지 않는 게 안전해요.",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1059,
+   "ko": "아래 저장돼 업데이트해도 유지돼요.",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1060,
+   "ko": "재생 제어(일시정지·재개)는 로컬 유닉스 소켓(IPC)으로만 이뤄지고 네트워크를 쓰지 않아요.",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1061,
+   "ko": "재생목록 파일은 플러그인 폴더가 아니라",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1062,
+   "ko": "재생목록(",
+   "ctx": "/mods/pixel-player",
+   "n": 1
+  },
+  {
+   "i": 1063,
+   "ko": "2026-10-06 @ 8bf587a · validate, 코드 읽음",
+   "ctx": "/mods/pr-pulse",
+   "n": 1
+  },
+  {
+   "i": 1064,
+   "ko": "GitHub API 호출이 전부 로컬 gh 인증을 그대로 써요. 다른 작업과 시간당 한도를 같이 써요 (15초/60초 주기로 자동 새로고침).",
+   "ctx": "/mods/pr-pulse",
+   "n": 1
+  },
+  {
+   "i": 1065,
+   "ko": "gh CLI 로그인 (gh auth status)",
+   "ctx": "/mods/pr-pulse",
+   "n": 1
+  },
+  {
+   "i": 1066,
+   "ko": "2026-10-06 @ 1e33faa · validate, 코드 읽음",
+   "ctx": "/mods/prismantis",
+   "n": 1
+  },
+  {
+   "i": 1067,
+   "ko": "1초 간격 타이머가 돌지만 표시 내용이 바뀔 때만 다시 그려서 유휴 세션엔 비용이 없어요",
+   "ctx": "/mods/prompt-cache-control",
+   "n": 1
+  },
+  {
+   "i": 1068,
+   "ko": "TTL(캐시 유지 시간)은 환경변수·설정·계정 종류(구독/API 키)로 자동 추정되고, 요청 간격을 관찰해 스스로 보정해요",
+   "ctx": "/mods/prompt-cache-control",
+   "n": 1
+  },
+  {
+   "i": 1069,
+   "ko": "2026-10-06 @ 2ac50fb · validate, 코드 읽음",
+   "ctx": "/mods/prompt-rail",
+   "n": 1
+  },
+  {
+   "i": 1070,
+   "ko": "같은 작성자의",
+   "ctx": "/mods/receipt",
+   "n": 1
+  },
+  {
+   "i": 1071,
+   "ko": "와 같은 Box/Text 기반 렌더링을 쓰지만, 이 mod의 테스트 스위트만 유일하게 terminal 서피스만 돌려 확인해 surfaces를 terminal로만 표기했어요(desktop이 안 되는 것을 확인한 건 아니고, 작성자가 desktop으로 검증한 기록이 없다는 뜻이에요).",
+   "ctx": "/mods/receipt",
+   "n": 1
+  },
+  {
+   "i": 1072,
+   "ko": "채팅만 하고 도구를 쓰지 않은 턴은 영수증을 남기지 않고, 다음 턴이 시작되면 자동으로 접혀요.",
+   "ctx": "/mods/receipt",
+   "n": 1
+  },
+  {
+   "i": 1073,
+   "ko": "Playwright (최초 /reels 실행 시 설치 안내가 떠요: npm install --prefix <plugin> playwright)",
+   "ctx": "/mods/reels",
+   "n": 1
+  },
+  {
+   "i": 1074,
+   "ko": "코드(helper/reels.cjs)까지 직접 읽어 확인했어요. Playwright로 헤드리스 Chrome을 띄워 https://www.youtube.com/shorts 를 열고, 화면을 CDP 스크린캐스트로 캡처해 PNG로 저장한 뒤 패널에 보여줘요. 제어는 로컬 유닉스 소켓(파일 경로를 쓰는 IPC)으로만 하고, 바깥에 열린 네트워크 포트는 아니에요.",
+   "ctx": "/mods/reels",
+   "n": 1
+  },
+  {
+   "i": 1075,
+   "ko": "프로필(쿠키 등)은 ~/.claude-mods/reels/profile에 로컬로만 저장돼요.",
+   "ctx": "/mods/reels",
+   "n": 1
+  },
+  {
+   "i": 1076,
+   "ko": "2026-10-06 @ 569c528 · validate, 코드 읽음",
+   "ctx": "/mods/replay-theater",
+   "n": 2
+  },
+  {
+   "i": 1077,
+   "ko": "Write로 기존 파일을 덮어쓸 때는 그 파일의 원래 내용을 읽어와 diff를 만들어요(그 외 다른 파일은 읽지 않아요).",
+   "ctx": "/mods/replay-theater",
+   "n": 1
+  },
+  {
+   "i": 1078,
+   "ko": "리플레이 기록은 메모리에만 있어서 세션을 새로고침하면 사라져요.",
+   "ctx": "/mods/replay-theater",
+   "n": 1
+  },
+  {
+   "i": 1079,
+   "ko": "Codex CLI (선택. codex review 추적 시에만 의미 있음)",
+   "ctx": "/mods/review-watch",
+   "n": 1
+  },
+  {
+   "i": 1080,
+   "ko": "ps, tail (macOS/Linux 기본 제공)",
+   "ctx": "/mods/review-watch",
+   "n": 1
+  },
+  {
+   "i": 1081,
+   "ko": "명령을 ps/tail로 관찰만 하고, 실행 여부 결정이나 차단은 merge-gate(같은 저장소)의 역할이에요.",
+   "ctx": "/mods/review-watch",
+   "n": 1
+  },
+  {
+   "i": 1082,
+   "ko": "저장소 설명에 'codex review 감시' 기능이 있다고 해서 codex 바이너리를 직접 실행하는지 코드로 확인했어요. 직접 실행하지 않아요. Claude가 이미 Bash로 실행한",
+   "ctx": "/mods/review-watch",
+   "n": 1
+  },
+  {
+   "i": 1083,
+   "ko": "tool.call 훅에 .catch가 없어요(validate 경고, gatingHooks hasCatch:false). 에러 시 fail-open인지 fail-closed인지는 엔진 내부 동작이라 코드만으로는 확정할 수 없어요",
+   "ctx": "/mods/secret-redactor",
+   "n": 1
+  },
+  {
+   "i": 1084,
+   "ko": "조직 관리 설정(managed settings)에서 가장 먼저 실행되도록 앉혀야 다른 plugin이 원본 값을 보기 전에 가려져요(저자 권장)",
+   "ctx": "/mods/secret-redactor",
+   "n": 1
+  },
+  {
+   "i": 1085,
+   "ko": "화면만 가리는 k-mods streamer-mode와 달리 모델이 받기 전에 실제 값을 지워요. 단, 도구 결과만 대상이라 사용자가 직접 입력한 프롬프트 속 비밀값은 가리지 못해요",
+   "ctx": "/mods/secret-redactor",
+   "n": 1
+  },
+  {
+   "i": 1086,
+   "ko": "2026-10-06 @ 12b5fea · validate, 코드 읽음",
+   "ctx": "/mods/secret-vault",
+   "n": 2
+  },
+  {
+   "i": 1087,
+   "ko": "README에는 'CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1이 필요하다'고 적혀 있지만(초기 early-access 시절 문구로 보여요), 2.1.291에서는 별도 설정 없이 validate가 바로 통과했어요.",
+   "ctx": "/mods/secret-vault",
+   "n": 2
+  },
+  {
+   "i": 1088,
+   "ko": "k-mods에는 이미 davila7/claude-code-templates 출처의 'secret-redactor'(도구 결과만 가리고 재사용을 막는 방식)가 등록돼 있어요. 이 mod(원래 이름도 secret-redactor라 이름이 겹쳐 secret-vault로 등록)는 그것과 달리 prompt.submit 훅으로 사용자가 직접 붙여넣은 값도 가리고, 가린 값을 도구 실행 직전에 원래대로 복원해 워크플로를 끊지 않는 점이 달라요. 두 mod가 겹치는 영역이 있으니 마케팅/운영 쪽에서 통합 여부를 검토해 보면 좋겠어요.",
+   "ctx": "/mods/secret-vault",
+   "n": 1
+  },
+  {
+   "i": 1089,
+   "ko": "2026-10-06 @ e6da26c · validate, 코드 읽음",
+   "ctx": "/mods/session-wrapped",
+   "n": 1
+  },
+  {
+   "i": 1090,
+   "ko": "PNG 카드는",
+   "ctx": "/mods/session-wrapped",
+   "n": 1
+  },
+  {
+   "i": 1091,
+   "ko": "를 직접 실행해야 열려요.",
+   "ctx": "/mods/session-wrapped",
+   "n": 1
+  },
+  {
+   "i": 1092,
+   "ko": "세션 종료 시 토스트 알림만 자동으로 뜨고, 실제 리캡 화면은",
+   "ctx": "/mods/session-wrapped",
+   "n": 1
+  },
+  {
+   "i": 1093,
+   "ko": "에 저장돼요.",
+   "ctx": "/mods/session-wrapped",
+   "n": 1
+  },
+  {
+   "i": 1094,
+   "ko": "통계는 전부 도구 호출 횟수·테스트 결과·토큰 사용량을 코드로 집계한 값이고, 요약 문구 생성에 모델을 쓰지 않아요.",
+   "ctx": "/mods/session-wrapped",
+   "n": 1
+  },
+  {
+   "i": 1095,
+   "ko": ") 기준이에요. k-mods로 설치했다면 k-mods가 검토한 뒤 올리는",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1096,
+   "ko": "2026-10-26 @ 985ad63 · validate, 코드 읽음, 테스트, 실사용 확인",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1097,
+   "ko": "Mermaid를 그릴 수 있다는 짧은 안내(약 130토큰)를 Claude에게 넣어요.",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1098,
+   "ko": "Mermaid에서 상자 id를 한글로 쓰면 그 그림은 코드로 보여요.",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1099,
+   "ko": "도구 호출 줄은 접혀 있어요.",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1100,
+   "ko": "를 누르면 입력과 결과(셸 출력 포함)가 펼쳐지고, 실패한 호출은 저절로 펼쳐져요.",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1101,
+   "ko": "업데이트를 기다려 주세요.",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1102,
+   "ko": "에는 넣지 않아요. 끄려면",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1103,
+   "ko": "예요(그리기는 그대로예요).",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1104,
+   "ko": "원본의 새 버전 알림은 원본 마켓플레이스(",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1105,
+   "ko": "처럼 id는 영문, 라벨만 한글로 쓰면 그려져요(원본 문제).",
+   "ctx": "/mods/skins",
+   "n": 1
+  },
+  {
+   "i": 1106,
+   "ko": "2026-10-12 · validate, 실사용 확인",
+   "ctx": "/mods/starter",
+   "n": 1
+  },
+  {
+   "i": 1107,
+   "ko": "추천 세트 (starter) · Claude Code mod · k-mods",
+   "ctx": "/mods/starter",
+   "n": 1
+  },
+  {
+   "i": 1108,
+   "ko": "2026-10-06 @ 8eafdaf · validate, 코드 읽음",
+   "ctx": "/mods/statuspane",
+   "n": 1
+  },
+  {
+   "i": 1109,
+   "ko": "Claude Code 2.1.287 이상 필요, 2.1.288에서 테스트됐다고 README에 적혀 있어요.",
+   "ctx": "/mods/statuspane",
+   "n": 1
+  },
+  {
+   "i": 1110,
+   "ko": "gh CLI (ciBranch 또는 ciPush 설정을 켰을 때만 필요해요, 기본은 둘 다 꺼져 있어요)",
+   "ctx": "/mods/statuspane",
+   "n": 1
+  },
+  {
+   "i": 1111,
+   "ko": "데스크톱 앱에서는 모델·이펙트·컨텍스트를 자체적으로 보여주기 때문에 이 카드는 터미널에서만 그려져요.",
+   "ctx": "/mods/statuspane",
+   "n": 1
+  },
+  {
+   "i": 1112,
+   "ko": "2026-10-11 · validate, 코드 읽음, 테스트, 실사용 확인",
+   "ctx": "/mods/sticky-memo",
+   "n": 1
+  },
+  {
+   "i": 1113,
+   "ko": "붙임 메모 (sticky-memo) · Claude Code mod · k-mods",
+   "ctx": "/mods/sticky-memo",
+   "n": 1
+  },
+  {
+   "i": 1114,
+   "ko": "스트리머 모드 (streamer-mode) · Claude Code mod · k-mods",
+   "ctx": "/mods/streamer-mode",
+   "n": 1
+  },
+  {
+   "i": 1115,
+   "ko": "2026-10-19 @ 46bee01 · validate, 코드 읽음",
+   "ctx": "/mods/subagent-tuner",
+   "n": 1
+  },
+  {
+   "i": 1116,
+   "ko": "Claude Code 2.1.295 이상에서 동작해요.",
+   "ctx": "/mods/subagent-tuner",
+   "n": 1
+  },
+  {
+   "i": 1117,
+   "ko": "설치 직후는 Manual이라 서브에이전트를 띄울 때마다 물어봐요. 패널은 답이 없으면 10분 뒤 진행하고, 대화상자는 답할 때까지 기다려요. 자리를 비울 때는 Auto로 두세요.",
+   "ctx": "/mods/subagent-tuner",
+   "n": 1
+  },
+  {
+   "i": 1118,
+   "ko": "와 SDK 실행, 포크는 건드리지 않아요.",
+   "ctx": "/mods/subagent-tuner",
+   "n": 1
+  },
+  {
+   "i": 1119,
+   "ko": "입력창 위 띠에서 Manual(묻기)과 Auto(저장한 기본값 우선)를 바꿔요. 터미널이 144칸 이상이면 옆 패널로, 좁으면 대화상자로 물어봐요.",
+   "ctx": "/mods/subagent-tuner",
+   "n": 1
+  },
+  {
+   "i": 1120,
+   "ko": "저장한 기본값은 에이전트 정의(frontmatter)에 적은 모델·추론 강도보다 우선해요. 기본값이 없으면 직접 만든 에이전트는 정의대로 두고, 내장 에이전트에만 작업 단어(review, fix, research 등)로 고른 추천값을 넣어요.",
+   "ctx": "/mods/subagent-tuner",
+   "n": 1
+  }
+ ]
+}

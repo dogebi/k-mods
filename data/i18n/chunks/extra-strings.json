@@ -1,0 +1,811 @@
+{
+ "ids": [
+  1162,
+  1163,
+  1164,
+  1165,
+  1166,
+  1167,
+  1168,
+  1169,
+  1170,
+  1171,
+  1172,
+  1173,
+  1174,
+  1175,
+  1176,
+  1177,
+  1178,
+  1179,
+  1180,
+  1181,
+  1182,
+  1183,
+  1184,
+  1185,
+  1186,
+  1187,
+  1188,
+  1189,
+  1190,
+  1191,
+  1192,
+  1193,
+  1194,
+  1195,
+  1196,
+  1197,
+  1198,
+  1199,
+  1200,
+  1201,
+  1202,
+  1203,
+  1204,
+  1205,
+  1206,
+  1207,
+  1208,
+  1209,
+  1210,
+  1211,
+  1212,
+  1213,
+  1214,
+  1215,
+  1216,
+  1217,
+  1218,
+  1219,
+  1220,
+  1221,
+  1222,
+  1223,
+  1224,
+  1225,
+  1226,
+  1227,
+  1228,
+  1229,
+  1230,
+  1231,
+  1232,
+  1233,
+  1234,
+  1235,
+  1236,
+  1237,
+  1238,
+  1239,
+  1240,
+  1241,
+  1242,
+  1243,
+  1244,
+  1245,
+  1246,
+  1247,
+  1248,
+  1249,
+  1250,
+  1251,
+  1252,
+  1253,
+  1254,
+  1255,
+  1256,
+  1257,
+  1258,
+  1259,
+  1260,
+  1261,
+  1262,
+  1263,
+  1264,
+  1265,
+  1266,
+  1267,
+  1268,
+  1269,
+  1270,
+  1271,
+  1272,
+  1273,
+  1274,
+  1275,
+  1276
+ ],
+ "items": [
+  {
+   "i": 1162,
+   "ko": "66개",
+   "ctx": "/",
+   "n": 1
+  },
+  {
+   "i": 1163,
+   "ko": "메모장",
+   "ctx": "/",
+   "n": 17
+  },
+  {
+   "i": 1164,
+   "ko": "묶음",
+   "ctx": "/",
+   "n": 22
+  },
+  {
+   "i": 1165,
+   "ko": "상태줄",
+   "ctx": "/",
+   "n": 37
+  },
+  {
+   "i": 1166,
+   "ko": "애니메이션",
+   "ctx": "/",
+   "n": 17
+  },
+  {
+   "i": 1167,
+   "ko": "연동",
+   "ctx": "/",
+   "n": 15
+  },
+  {
+   "i": 1168,
+   "ko": "오리지널",
+   "ctx": "/",
+   "n": 87
+  },
+  {
+   "i": 1169,
+   "ko": "자동화",
+   "ctx": "/",
+   "n": 17
+  },
+  {
+   "i": 1170,
+   "ko": "전체",
+   "ctx": "/",
+   "n": 1
+  },
+  {
+   "i": 1171,
+   "ko": "지킴이",
+   "ctx": "/",
+   "n": 11
+  },
+  {
+   "i": 1172,
+   "ko": "추천",
+   "ctx": "/",
+   "n": 51
+  },
+  {
+   "i": 1173,
+   "ko": "택시팩",
+   "ctx": "/",
+   "n": 4
+  },
+  {
+   "i": 1174,
+   "ko": "테마",
+   "ctx": "/",
+   "n": 7
+  },
+  {
+   "i": 1175,
+   "ko": "한국어화",
+   "ctx": "/",
+   "n": 3
+  },
+  {
+   "i": 1176,
+   "ko": "읽기",
+   "ctx": "/guide",
+   "n": 10
+  },
+  {
+   "i": 1177,
+   "ko": "1초",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1178,
+   "ko": "mod의",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1179,
+   "ko": "가이드",
+   "ctx": "/guide/cheatsheet",
+   "n": 13
+  },
+  {
+   "i": 1180,
+   "ko": "값",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1181,
+   "ko": "거부",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1182,
+   "ko": "과",
+   "ctx": "/guide/cheatsheet",
+   "n": 3
+  },
+  {
+   "i": 1183,
+   "ko": "기여하기",
+   "ctx": "/guide/cheatsheet",
+   "n": 76
+  },
+  {
+   "i": 1184,
+   "ko": "나",
+   "ctx": "/guide/cheatsheet",
+   "n": 6
+  },
+  {
+   "i": 1185,
+   "ko": "내용",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1186,
+   "ko": "네임스페이스",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1187,
+   "ko": "는",
+   "ctx": "/guide/cheatsheet",
+   "n": 4
+  },
+  {
+   "i": 1188,
+   "ko": "닫기",
+   "ctx": "/guide/cheatsheet",
+   "n": 76
+  },
+  {
+   "i": 1189,
+   "ko": "데스크톱",
+   "ctx": "/guide/cheatsheet",
+   "n": 2
+  },
+  {
+   "i": 1190,
+   "ko": "도구",
+   "ctx": "/guide/cheatsheet",
+   "n": 34
+  },
+  {
+   "i": 1191,
+   "ko": "등",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1192,
+   "ko": "뜻",
+   "ctx": "/guide/cheatsheet",
+   "n": 5
+  },
+  {
+   "i": 1193,
+   "ko": "메서드",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1194,
+   "ko": "명령",
+   "ctx": "/guide/cheatsheet",
+   "n": 70
+  },
+  {
+   "i": 1195,
+   "ko": "명령어",
+   "ctx": "/guide/cheatsheet",
+   "n": 2
+  },
+  {
+   "i": 1196,
+   "ko": "목차",
+   "ctx": "/guide/cheatsheet",
+   "n": 5
+  },
+  {
+   "i": 1197,
+   "ko": "받기",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1198,
+   "ko": "사이트",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1199,
+   "ko": "서브에이전트",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1200,
+   "ko": "세션",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1201,
+   "ko": "숨기려면",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1202,
+   "ko": "아니요",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1203,
+   "ko": "어디서",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1204,
+   "ko": "언제",
+   "ctx": "/guide/cheatsheet",
+   "n": 9
+  },
+  {
+   "i": 1205,
+   "ko": "엔",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1206,
+   "ko": "예",
+   "ctx": "/guide/cheatsheet",
+   "n": 3
+  },
+  {
+   "i": 1207,
+   "ko": "와",
+   "ctx": "/guide/cheatsheet",
+   "n": 2
+  },
+  {
+   "i": 1208,
+   "ko": "요소",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1209,
+   "ko": "의",
+   "ctx": "/guide/cheatsheet",
+   "n": 6
+  },
+  {
+   "i": 1210,
+   "ko": "이름",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1211,
+   "ko": "이벤트",
+   "ctx": "/guide/cheatsheet",
+   "n": 11
+  },
+  {
+   "i": 1212,
+   "ko": "인자",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1213,
+   "ko": "인터페이스",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1214,
+   "ko": "타임아웃",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1215,
+   "ko": "터미널",
+   "ctx": "/guide/cheatsheet",
+   "n": 18
+  },
+  {
+   "i": 1216,
+   "ko": "턴",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1217,
+   "ko": "텔레메트리",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1218,
+   "ko": "파일",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1219,
+   "ko": "필수",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1220,
+   "ko": "항목",
+   "ctx": "/guide/cheatsheet",
+   "n": 2
+  },
+  {
+   "i": 1221,
+   "ko": "환경변수",
+   "ctx": "/guide/cheatsheet",
+   "n": 1
+  },
+  {
+   "i": 1222,
+   "ko": "명령과",
+   "ctx": "/guide/install",
+   "n": 1
+  },
+  {
+   "i": 1223,
+   "ko": "범위",
+   "ctx": "/guide/install",
+   "n": 1
+  },
+  {
+   "i": 1224,
+   "ko": "설치하기",
+   "ctx": "/guide/install",
+   "n": 2
+  },
+  {
+   "i": 1225,
+   "ko": "성공하면",
+   "ctx": "/guide/install",
+   "n": 1
+  },
+  {
+   "i": 1226,
+   "ko": "세션에서",
+   "ctx": "/guide/install",
+   "n": 1
+  },
+  {
+   "i": 1227,
+   "ko": "셸에서",
+   "ctx": "/guide/install",
+   "n": 3
+  },
+  {
+   "i": 1228,
+   "ko": "셸에서는",
+   "ctx": "/guide/install",
+   "n": 1
+  },
+  {
+   "i": 1229,
+   "ko": "에",
+   "ctx": "/guide/install",
+   "n": 2
+  },
+  {
+   "i": 1230,
+   "ko": "예요.",
+   "ctx": "/guide/install",
+   "n": 1
+  },
+  {
+   "i": 1231,
+   "ko": "은",
+   "ctx": "/guide/install",
+   "n": 1
+  },
+  {
+   "i": 1232,
+   "ko": "참고.",
+   "ctx": "/guide/install",
+   "n": 2
+  },
+  {
+   "i": 1233,
+   "ko": "치트시트",
+   "ctx": "/guide/install",
+   "n": 5
+  },
+  {
+   "i": 1234,
+   "ko": "확인.",
+   "ctx": "/guide/install",
+   "n": 1
+  },
+  {
+   "i": 1235,
+   "ko": "경로",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1236,
+   "ko": "달기",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1237,
+   "ko": "를",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1238,
+   "ko": "만",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1239,
+   "ko": "실행이나",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1240,
+   "ko": "안에서",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1241,
+   "ko": "없음",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1242,
+   "ko": "여기서는",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1243,
+   "ko": "으로",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1244,
+   "ko": "처럼",
+   "ctx": "/guide/make-your-own",
+   "n": 1
+  },
+  {
+   "i": 1245,
+   "ko": "라벨",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 1246,
+   "ko": "샌드박싱",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 1247,
+   "ko": "이나",
+   "ctx": "/guide/safety",
+   "n": 3
+  },
+  {
+   "i": 1248,
+   "ko": "조합",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 1249,
+   "ko": "줄에",
+   "ctx": "/guide/safety",
+   "n": 2
+  },
+  {
+   "i": 1250,
+   "ko": "출처",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 1251,
+   "ko": "호출",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 1252,
+   "ko": "mod는",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 1253,
+   "ko": "가능",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 1254,
+   "ko": "됨",
+   "ctx": "/guide/what-are-mods",
+   "n": 4
+  },
+  {
+   "i": 1255,
+   "ko": "마크다운",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 1256,
+   "ko": "바깥",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 1257,
+   "ko": "보임",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 1258,
+   "ko": "불가능",
+   "ctx": "/guide/what-are-mods",
+   "n": 3
+  },
+  {
+   "i": 1259,
+   "ko": "안",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 1260,
+   "ko": "정체",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 1261,
+   "ko": "코드",
+   "ctx": "/guide/what-are-mods",
+   "n": 12
+  },
+  {
+   "i": 1262,
+   "ko": "탭의",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 1263,
+   "ko": "검토",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 69
+  },
+  {
+   "i": 1264,
+   "ko": "네트워크",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 12
+  },
+  {
+   "i": 1265,
+   "ko": "데이터",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 69
+  },
+  {
+   "i": 1266,
+   "ko": "라이선스",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 69
+  },
+  {
+   "i": 1267,
+   "ko": "분류",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 69
+  },
+  {
+   "i": 1268,
+   "ko": "원작",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 60
+  },
+  {
+   "i": 1269,
+   "ko": "종류",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 69
+  },
+  {
+   "i": 1270,
+   "ko": "터미널에서",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 69
+  },
+  {
+   "i": 1271,
+   "ko": "준비물",
+   "ctx": "/mods/browser-lanes",
+   "n": 19
+  },
+  {
+   "i": 1272,
+   "ko": "소리",
+   "ctx": "/mods/combo-meter",
+   "n": 6
+  },
+  {
+   "i": 1273,
+   "ko": "에서",
+   "ctx": "/mods/gfm-render",
+   "n": 1
+  },
+  {
+   "i": 1274,
+   "ko": "또는",
+   "ctx": "/mods/hud",
+   "n": 1
+  },
+  {
+   "i": 1275,
+   "ko": "macOS에서",
+   "ctx": "/mods/mod-usage",
+   "n": 1
+  },
+  {
+   "i": 1276,
+   "ko": "Bash로",
+   "ctx": "/mods/modstage",
+   "n": 1
+  }
+ ]
+}

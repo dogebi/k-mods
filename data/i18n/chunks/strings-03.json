@@ -1,0 +1,2113 @@
+{
+ "ids": [
+  656,
+  657,
+  658,
+  659,
+  660,
+  661,
+  662,
+  663,
+  664,
+  665,
+  666,
+  667,
+  668,
+  669,
+  670,
+  671,
+  672,
+  673,
+  674,
+  675,
+  676,
+  677,
+  678,
+  679,
+  680,
+  681,
+  682,
+  683,
+  684,
+  685,
+  686,
+  687,
+  688,
+  689,
+  690,
+  691,
+  692,
+  693,
+  694,
+  695,
+  696,
+  697,
+  698,
+  699,
+  700,
+  701,
+  702,
+  703,
+  704,
+  705,
+  706,
+  707,
+  708,
+  709,
+  710,
+  711,
+  712,
+  713,
+  714,
+  715,
+  716,
+  717,
+  718,
+  719,
+  720,
+  721,
+  722,
+  723,
+  724,
+  725,
+  726,
+  727,
+  728,
+  729,
+  730,
+  731,
+  732,
+  733,
+  734,
+  735,
+  736,
+  737,
+  738,
+  739,
+  740,
+  741,
+  742,
+  743,
+  744,
+  745,
+  746,
+  747,
+  748,
+  749,
+  750,
+  751,
+  752,
+  753,
+  754,
+  755,
+  756,
+  757,
+  758,
+  759,
+  760,
+  761,
+  762,
+  763,
+  764,
+  765,
+  766,
+  767,
+  768,
+  769,
+  770,
+  771,
+  772,
+  773,
+  774,
+  775,
+  776,
+  777,
+  778,
+  779,
+  780,
+  781,
+  782,
+  783,
+  784,
+  785,
+  786,
+  787,
+  788,
+  789,
+  790,
+  791,
+  792,
+  793,
+  794,
+  795,
+  796,
+  797,
+  798,
+  799,
+  800,
+  801,
+  802,
+  803,
+  804,
+  805,
+  806,
+  807,
+  808,
+  809,
+  810,
+  811,
+  812,
+  813,
+  814,
+  815,
+  816,
+  817,
+  818,
+  819,
+  820,
+  821,
+  822,
+  823,
+  824,
+  825,
+  826,
+  827,
+  828,
+  829,
+  830,
+  831,
+  832,
+  833,
+  834,
+  835,
+  836,
+  837,
+  838,
+  839,
+  840,
+  841,
+  842,
+  843,
+  844,
+  845,
+  846,
+  847,
+  848,
+  849,
+  850,
+  851,
+  852,
+  853,
+  854,
+  855,
+  856,
+  857,
+  858,
+  859,
+  860,
+  861,
+  862,
+  863,
+  864,
+  865,
+  866,
+  867,
+  868,
+  869,
+  870,
+  871,
+  872,
+  873,
+  874,
+  875,
+  876,
+  877,
+  878,
+  879,
+  880,
+  881,
+  882,
+  883,
+  884,
+  885,
+  886,
+  887,
+  888,
+  889,
+  890,
+  891,
+  892,
+  893,
+  894,
+  895,
+  896,
+  897,
+  898,
+  899,
+  900,
+  901,
+  902,
+  903,
+  904,
+  905,
+  906,
+  907,
+  908,
+  909,
+  910,
+  911,
+  912,
+  913,
+  914,
+  915,
+  916,
+  917,
+  918,
+  919,
+  920,
+  921,
+  922,
+  923,
+  924,
+  925,
+  926,
+  927,
+  928,
+  929,
+  930,
+  931,
+  932,
+  933,
+  934,
+  935,
+  936,
+  937,
+  938,
+  939,
+  940,
+  941,
+  942,
+  943,
+  944,
+  945,
+  946,
+  947,
+  948,
+  949,
+  950,
+  951,
+  952,
+  953,
+  954,
+  955,
+  956
+ ],
+ "items": [
+  {
+   "i": 656,
+   "ko": "managed settings가 없고 Team·Enterprise 플랜으로 로그인하지 않은 개인 사용자",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 657,
+   "ko": "mod가 한 번 로드되면 이런 걸 할 수 있어요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 658,
+   "ko": "mod는 샌드박스 없이 내 권한으로 Claude Code 안에서 돌아요. 그래서 설치하기 전에 뭘 할 수 있는지 알아 두는 게 중요해요. 이 글은 mod가 닿을 수 있는 범위, 설치 전 직접 확인하는 법, k-mods가 검토하는 기준과 권한 라벨, 조직 관리자가 쓸 수 있는 통제, 조심해야 할 신호를 정리해요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 659,
+   "ko": "mod는 샌드박스가 없어요",
+   "ctx": "/guide/safety",
+   "n": 2
+  },
+  {
+   "i": 660,
+   "ko": "mod를 안전하게 쓰는 법 · Claude Code mods 가이드 · k-mods",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 661,
+   "ko": "“화면만 바꾼다”는 설명인데 🌐 네트워크나 ⚙️ 프로그램 실행 라벨이 붙어 있어요. 설명과 권한이 안 맞으면 코드를 더 읽어 보는 게 좋아요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 662,
+   "ko": "⚙️ 프로그램 실행",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 663,
+   "ko": "✏️ 파일 쓰기",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 664,
+   "ko": "가 있는데, 대화 내용을 기기 밖으로 보내지 않는다는 설명이 없어요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 665,
+   "ko": "각 mod 페이지(또는",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 666,
+   "ko": "각 mod 페이지에는 정적 분석으로 찾아낸 권한이 라벨로 붙어요. 위험한 것부터 나열했어요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 667,
+   "ko": "검토 기록",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 668,
+   "ko": "계열로 파일을 읽어요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 669,
+   "ko": "권한 라벨",
+   "ctx": "/guide/safety",
+   "n": 4
+  },
+  {
+   "i": 670,
+   "ko": "권한 라벨 표시",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 671,
+   "ko": "권한 확인 대화상자 자체는 못 바꿔요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 672,
+   "ko": "규칙으로 막아 둔 호출까지 mod가 뒤집어 승인할 수 있어요. 다만 mod는 Claude Code의",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 673,
+   "ko": "규칙이 물어볼 호출이나, 내",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 674,
+   "ko": "내 계정이 닿는 어디든 파일을 읽거나 써요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 675,
+   "ko": "내 권한으로 프로그램을 실행해요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 676,
+   "ko": "내 비밀 정보 읽기",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 677,
+   "ko": "내 사용량을 씀",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 678,
+   "ko": "내 세션을 바꿈",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 679,
+   "ko": "내 세션을 봄",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 680,
+   "ko": "내 컴퓨터에서 나처럼 행동",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 681,
+   "ko": "내 플랜이나 API 키로 모델을 호출해요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 682,
+   "ko": "네트워크 요청을 보내요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 683,
+   "ko": "는 Claude가 사용자에게 묻는 대화상자를 다시 그릴 수 있다는 뜻이고,",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 684,
+   "ko": "는 권한 확인창이 뜨기도 전에 도구 호출을 승인·거부할 수 있다는 뜻이에요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 685,
+   "ko": "는 대화의 각 줄을 저장되기 전에 고쳐 쓸 수 있다는 뜻이에요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 686,
+   "ko": "다른 세션이나 서브에이전트의 Claude가 읽는 메시지를 보내요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 687,
+   "ko": "도구 호출을 승인하는 mod는",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 688,
+   "ko": "라면, 내장 가드(",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 689,
+   "ko": "라벨 읽는 법.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 690,
+   "ko": "라이선스 게이트",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 691,
+   "ko": "라이선스가 아예 없는 저장소의 코드예요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 692,
+   "ko": "로 내 컴퓨터에서 프로그램을 실행해요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 693,
+   "ko": "로 다른 세션에 메시지를 보내요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 694,
+   "ko": "로 대화 내용에 닿아요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 695,
+   "ko": "로 모델을 불러요. 내 사용량을 써요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 696,
+   "ko": "로 소리를 내요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 697,
+   "ko": "로 인터넷이나 외부 서버와 통신해요. 대화 내용이 나갈 수도 있으니 목적지를 확인하세요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 698,
+   "ko": "로 직접 한 번 더 확인해 보세요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 699,
+   "ko": "로 파일을 써요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 700,
+   "ko": "로 프롬프트를 대신 넣거나 보내요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 701,
+   "ko": "를 읽어요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 702,
+   "ko": "를 통과하는지 확인하고, 사람이 코드 전체를 읽어요(",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 703,
+   "ko": "마켓플레이스에서 바로 설치하기 전에, 그 mod가 받는 이벤트와 부르는 API를 실행 없이 볼 수 있어요. 저장소를 복제한 뒤 셸에서 실행하세요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 704,
+   "ko": "묻지 않고 행동",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 705,
+   "ko": "사용자에게 뭘 보여줄지는 조작할 수 없어요. (공식 문서:",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 706,
+   "ko": "설치 전에 직접 확인하기",
+   "ctx": "/guide/safety",
+   "n": 2
+  },
+  {
+   "i": 707,
+   "ko": "업데이트 때 재검토",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 708,
+   "ko": "에서 보는 상세 정보)에서 이런 걸 확인하세요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 709,
+   "ko": "연결된 MCP 서버의 도구를 세션 권한 규칙 아래에서 불러요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 710,
+   "ko": "위 어느 것도 안 하고 화면만 그려요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 711,
+   "ko": "은 모든 도구 호출과 프롬프트를 보고 바꿀 수 있다는 뜻이고,",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 712,
+   "ko": "을 켜 놨어도 mod는 영향받지 않아요. 샌드박스는 Claude가 실행하는 Bash 명령만 격리하고, mod가 직접 띄운 프로세스는 샌드박스 밖에서 돌아요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 713,
+   "ko": "의심스러운 점이 있으면 설치 전에",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 714,
+   "ko": "이 있는데, 설명 어디에도 왜 필요한지 안 적혀 있어요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 715,
+   "ko": "이런 mod는 조심하세요",
+   "ctx": "/guide/safety",
+   "n": 2
+  },
+  {
+   "i": 716,
+   "ko": "이에요. 👀가 있어도 🌐(네트워크)·⚙️(프로그램 실행)·💬(프롬프트 입력)이 없으면 그 mod는 대화를 기기 밖으로 내보낼 방법이 없어요. 💬는 Claude에게 대신 보내 달라고 시키는 우회로가 될 수 있어서 함께 봐요. 반대로 👀와 🌐가 함께 있으면 mod 페이지의 “코드에 있는 주소”와 검토 노트에서 어디로 무엇을 보내는지 꼭 확인하세요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 717,
+   "ko": "작성자 요청 시 삭제",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 718,
+   "ko": "정적 분석 + 코드 읽기",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 719,
+   "ko": "종류(",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 720,
+   "ko": "줄에 어떤 변수인지 나와요.",
+   "ctx": "/guide/safety",
+   "n": 2
+  },
+  {
+   "i": 721,
+   "ko": "줄에서 특히 눈여겨볼 항목이에요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 722,
+   "ko": "줄에서는 이런 게 중요해요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 723,
+   "ko": "처럼 도구 호출을 승인·거부할 수 있는 mod인데, 소스가 비공개거나 어떤 커밋을 받는지 알 수 없어요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 724,
+   "ko": "커밋 고정(",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 725,
+   "ko": "토큰이나 비밀번호를 받으면서",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 726,
+   "ko": "표시 없이 평문으로 저장해요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 727,
+   "ko": "프롬프트를 대신 보내요. 내가 친 것처럼 보낼 수도 있어요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 728,
+   "ko": "한 mod에 라벨이 여러 개 붙을 수 있어요. 라벨이 없다면 화면만 바꾸는 mod라는 뜻이에요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 729,
+   "ko": "화면을 그리는 mod는 거의 다 👀(대화 읽기)가 붙어요. 턴이 끝났다는 신호만 받아도 Claude의 마지막 답변이 함께 들어오기 때문이에요. 그래서 👀 하나만으로 걱정할 필요는 없어요. 정말 볼 것은",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 730,
+   "ko": "환경변수·설정을 읽어요. API 키가 들어 있을 수 있어요. 출력의",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 731,
+   "ko": "환경변수를 설정해요. 이후 Claude Code가 실행하는 모든 명령·MCP 서버에 영향을 줄 수 있어요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 732,
+   "ko": "회사 Claude Code 환경이라면 관리자가 mod 정책을 따로 둘 수 있어요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 733,
+   "ko": "회사 환경에서 특정 k-mods mod가 안 뜨면, 먼저 이 정책들 때문인지 확인해 보세요. 관리자 쪽 설정 방법은 공식 문서에 있어요.",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 734,
+   "ko": "회사·조직에서 쓸 때",
+   "ctx": "/guide/safety",
+   "n": 2
+  },
+  {
+   "i": 735,
+   "ko": "훅으로 도구 호출을 막거나 대신 답할 수 있어요",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 736,
+   "ko": "훅이 막은 호출도 대신 승인할 수 있어요. 더 나아가",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 737,
+   "ko": "훅이나 대화를 그리는 화면,",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 738,
+   "ko": "🌐 네트워크",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 739,
+   "ko": "🎨 화면만",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 740,
+   "ko": "👀 대화 읽기",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 741,
+   "ko": "💬 프롬프트 입력",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 742,
+   "ko": "📂 파일 읽기",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 743,
+   "ko": "📨 세션 메시지",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 744,
+   "ko": "🔊 소리",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 745,
+   "ko": "🔑 환경·설정 읽기",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 746,
+   "ko": "🛡️ 도구 호출 제어",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 747,
+   "ko": "🤖 모델 호출",
+   "ctx": "/guide/safety",
+   "n": 1
+  },
+  {
+   "i": 748,
+   "ko": ") 안의 자바스크립트·타입스크립트 코드가 도구 호출이나 프롬프트 제출 같은 이벤트를 직접 받아서, Claude Code의 동작을 바꾸거나 화면을 그려요. 이 글은 mod가 정확히 뭔지, 뭘 할 수 있는지, 어디서 도는지, 비슷한 다른 기능들과 뭐가 다른지, 어떻게 켜고 끄는지를 정리해요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 749,
+   "ko": ") 코드",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 750,
+   "ko": "), MCP 서버는 모두 Claude Code",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 751,
+   "ko": "), 에디터 통합 터미널, JetBrains 플러그인",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 752,
+   "ko": ")“가 발생하는데, mod는 자바스크립트나 타입스크립트로 쓴 함수(훅,",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 753,
+   "ko": ")“이라고 따로 불러요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 754,
+   "ko": ")과 화면 그리기를 함께 갖춘 mod가 그 예예요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 755,
+   "ko": ")는",
+   "ctx": "/guide/what-are-mods",
+   "n": 2
+  },
+  {
+   "i": 756,
+   "ko": ")로 그 이벤트를 받아서 지켜보거나, 바꾸거나, 아예 가로채서 대신 처리해요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 757,
+   "ko": ")에 탭, 버튼, 입력창을 그려요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 758,
+   "ko": ")예요. 보고, 바꾸고, 대신 답해요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 759,
+   "ko": ")이나 입력창 위 띠(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 760,
+   "ko": ": Claude Code 2.1.287 이상.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 761,
+   "ko": ": Claude 턴 없이 즉시 실행되는",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 762,
+   "ko": ": mod API예요. 화면을 그리거나 파일을 읽는 등 바깥세상과 닿는 유일한 통로예요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 763,
+   "ko": ": 다음 핸들러(다른 mod이거나 Claude Code 자체 동작)를 부르는 함수예요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 764,
+   "ko": ": 도구 호출 줄, 스피너, Claude가 질문할 때 쓰는 대화상자 같은 걸 바꾸거나 새로 그려요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 765,
+   "ko": ": 도구 호출을 잠깐 멈추고 사용자에게 물어보거나, 실행 없이 바로 답하거나, 요청 하나를 다른 모델로 보내요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 766,
+   "ko": ": 이벤트 데이터예요. 읽기 전용이라 고쳐 쓸 수 없어요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 767,
+   "ko": ": 트랜스크립트 옆 패널(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 768,
+   "ko": ": 한 mod 안의 훅들은 같은 파일의 변수를 공유해요. 한 훅이 도구 호출 수를 세면 다른 훅이 그 값을 화면에 보여주는 식이에요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 769,
+   "ko": "Claude Code 안에서 직접 실행되는 플러그인(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 770,
+   "ko": "Claude Code 자체 기능 중 일부도 mod로 만들어져 있어요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 771,
+   "ko": "Claude Code 자체 화면 다시 그리기",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 772,
+   "ko": "Claude Code 프로세스 안에서 직접 도는 플러그인 함수",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 773,
+   "ko": "Claude Code는 설정 파일로 등록하는 기존 방식도 “훅”이라고 부르지만, k-mods 문서에서 “훅”은 항상 mod의 핸들러를 가리켜요. 셸 명령·HTTP 요청·프롬프트로 동작하는 기존 방식은 “설정 훅(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 774,
+   "ko": "Claude Code에 내장된 mods",
+   "ctx": "/guide/what-are-mods",
+   "n": 2
+  },
+  {
+   "i": 775,
+   "ko": "Claude Code와 내장 mods의 사용량 기록 전송",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 776,
+   "ko": "Claude가 쓸 수 있는 도구",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 777,
+   "ko": "Claude가 아는 것과 하는 일",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 778,
+   "ko": "Claude가 외부 시스템에 닿아야 할 때",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 779,
+   "ko": "Claude가 읽는 지침이 담긴",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 780,
+   "ko": "MCP 서버",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 781,
+   "ko": "VS Code 확장 채팅 패널",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 782,
+   "ko": "claude-code 저장소의 mods 디렉터리",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 783,
+   "ko": "claude.ai·모바일 앱의 원격 제어(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 784,
+   "ko": "mod 하나만",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 785,
+   "ko": "mod 하나의 코드(훅 모듈,",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 786,
+   "ko": "mods 켜고 끄기",
+   "ctx": "/guide/what-are-mods",
+   "n": 2
+  },
+  {
+   "i": 787,
+   "ko": "mods가 뭔가요? · Claude Code mods 가이드 · k-mods",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 788,
+   "ko": "mod가 할 수 있는 일",
+   "ctx": "/guide/what-are-mods",
+   "n": 2
+  },
+  {
+   "i": 789,
+   "ko": "mod는 Claude Code 2.1.287부터 쓸 수 있는 공식 기능이에요. 플러그인(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 790,
+   "ko": "mod를 쓰기 위한",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 791,
+   "ko": "mod의 훅은 플러그인이 로드되는 모든 세션에서 실행돼요. 다만",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 792,
+   "ko": "같은 지침을 계속 붙여넣고 있을 때",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 793,
+   "ko": "관찰(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 794,
+   "ko": "그대로 흘려보내요",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 795,
+   "ko": "기본은 꺼져 있음.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 796,
+   "ko": "끄는 범위에 따라 방법이 달라요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 797,
+   "ko": "끄는 법",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 798,
+   "ko": "내 컴퓨터 터미널에만 보임",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 799,
+   "ko": "내가 설치한 모든 mod, 모든 세션",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 800,
+   "ko": "내용을 바꿔서 흘려보내요",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 801,
+   "ko": "는 Claude Code 기본 버전으로 동작",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 802,
+   "ko": "데스크톱 앱 Code 탭 (WSL 세션 제외)",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 803,
+   "ko": "데스크톱 앱의 WSL 세션",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 804,
+   "ko": "도구 호출, 프롬프트, 명령, 턴, 화면에 그리는 내용",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 805,
+   "ko": "도구 호출·요청 가로채기",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 806,
+   "ko": "됨 (내 컴퓨터 세션에서)",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 807,
+   "ko": "등)",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 808,
+   "ko": "로 시작해요. 다른 커스터마이징도 같이 꺼져요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 809,
+   "ko": "로 이벤트를 등록해요. Claude Code는 핸들러에 세 가지를 넘겨줘요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 810,
+   "ko": "를 변형해서 스피너 문구 뒤에 호출 횟수를 붙여요. 같은 이벤트에 여러 mod가 걸려 있으면 미들웨어 체인처럼 순서대로 실행돼요. 등록 순서 규칙과 실패 처리는",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 811,
+   "ko": "를 보세요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 812,
+   "ko": "를 부르지 않고 직접 답해서 체인을 끊어요",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 813,
+   "ko": "를 설정해요. 설정 훅과 커스텀 상태줄도 같이 꺼지고, 조직이 관리하는 것만 계속 돌아요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 814,
+   "ko": "를 설정했다면 지워 주세요. Claude Code 2.1.287부터는 이 변수를 무시해서",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 815,
+   "ko": "를 추가해요. Claude가 작업 중이어도 실행되게 할 수 있어요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 816,
+   "ko": "를 프로젝트 지침으로 불러옴",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 817,
+   "ko": "명령과 그 패널을 담당",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 818,
+   "ko": "명령으로 내 코드 바로 실행",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 819,
+   "ko": "뭘로 만드나요",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 820,
+   "ko": "바꿀 수 있는 것",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 821,
+   "ko": "버전 요구사항",
+   "ctx": "/guide/what-are-mods",
+   "n": 2
+  },
+  {
+   "i": 822,
+   "ko": "버전이 낮으면 mod가 설치는 되어도 로드되지 않아요. 설치·업데이트 방법은",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 823,
+   "ko": "변형(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 824,
+   "ko": "보임 (터미널 전용 요소 일부 제외)",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 825,
+   "ko": "사용자가 설치한 mod로부터 조직이 관리하는 설정을 지켜줌",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 826,
+   "ko": "사용자는 못 끔. 관리자가 managed settings에서 순서를 정함",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 827,
+   "ko": "생명주기 이벤트에 Claude Code가 실행하는 셸 명령·HTTP 요청·프롬프트",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 828,
+   "ko": "설정 훅(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 829,
+   "ko": "설정 훅, 스킬, 상태줄(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 830,
+   "ko": "설정 훅·스킬·MCP와 뭐가 다른가요",
+   "ctx": "/guide/what-are-mods",
+   "n": 2
+  },
+  {
+   "i": 831,
+   "ko": "스크립트 +",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 832,
+   "ko": "스킬 제공",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 833,
+   "ko": "스킬(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 834,
+   "ko": "실행 환경",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 835,
+   "ko": "아래에서 볼 수 있고, 업데이트·삭제는 안 되지만 끌 수는 있어요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 836,
+   "ko": "아무 언어로 만든 서버",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 837,
+   "ko": "안 됨 (WSL에선 플러그인 자체가 안 됨)",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 838,
+   "ko": "안 보임",
+   "ctx": "/guide/what-are-mods",
+   "n": 4
+  },
+  {
+   "i": 839,
+   "ko": "어디서 도나요",
+   "ctx": "/guide/what-are-mods",
+   "n": 2
+  },
+  {
+   "i": 840,
+   "ko": "어떻게 동작하나요",
+   "ctx": "/guide/what-are-mods",
+   "n": 2
+  },
+  {
+   "i": 841,
+   "ko": "언제 고르나요",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 842,
+   "ko": "얼리 액세스 때",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 843,
+   "ko": "에 뜨는 이름",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 844,
+   "ko": "에 테스트까지 포함해서 공개돼 있어요. 실제 mod 코드가 어떻게 생겼는지 참고하기 좋아요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 845,
+   "ko": "에서 끄거나 분석 기능 자체를 끔 (",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 846,
+   "ko": "에서 끄거나, 어떤 지침 파일을 쓸지 설정 변경",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 847,
+   "ko": "에서 끄면",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 848,
+   "ko": "에서 끔",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 849,
+   "ko": "에서 더 다뤄요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 850,
+   "ko": "에서 돌기 때문에 이런 걸 할 수 있어요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 851,
+   "ko": "에서 움직여요. 스크립트를 실행하거나 Claude에게 글이나 도구를 쥐여줄 뿐이에요. mod는 Claude Code",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 852,
+   "ko": "에서 켜고 끔",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 853,
+   "ko": "예를 들어 도구 호출마다 카운트를 올리고 스피너 옆에 보여주는 mod는 이렇게 생겼어요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 854,
+   "ko": "예요. 도구 호출, 프롬프트 제출, 화면 그리기처럼 Claude Code가 뭔가 하려는 순간마다 “이벤트(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 855,
+   "ko": "외부 프로세스·서비스가 Claude에게 도구를 줌",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 856,
+   "ko": "으로 둬도 mod가 꺼지지 않아요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 857,
+   "ko": "은 터미널과 데스크톱 앱에서만 보여요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 858,
+   "ko": "을 관찰만 하고, 두 번째 훅은",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 859,
+   "ko": "응답(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 860,
+   "ko": "의 소스는",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 861,
+   "ko": "이미 있는 스크립트로 이벤트를 막거나 허용하거나 기록만 하면 될 때",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 862,
+   "ko": "이번 세션의 모든 mod",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 863,
+   "ko": "이벤트 진행 여부, 도구 호출의 인자·결과, Claude에게 추가되는 맥락",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 864,
+   "ko": "자바스크립트·타입스크립트",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 865,
+   "ko": "작업이 길어질 때 놓치기 쉬운 걸 알려주는 보조 에이전트",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 866,
+   "ko": "조직 소속이라면 관리자가 managed settings로 mod 로드 자체를 더 제한할 수도 있어요. 자세한 내용은",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 867,
+   "ko": "처럼 명령(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 868,
+   "ko": "처리 방식",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 869,
+   "ko": "첫 번째 훅은",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 870,
+   "ko": "클라우드 세션",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 871,
+   "ko": "탭에서 비활성화하거나 삭제해요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 872,
+   "ko": "터미널(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 873,
+   "ko": "패널이나 입력창 위 띠가 필요할 때, 커스텀 명령이 필요할 때, 이벤트 자체를 바꿔야 할 때",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 874,
+   "ko": "플러그인이 클라우드 세션까지 닿을 때만 됨",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 875,
+   "ko": "하나의 플러그인이 mod, 스킬, MCP 서버를 동시에 담을 수도 있어요. k-mods의",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 876,
+   "ko": "한 줄 자가요약: mod는 Claude Code 이벤트 사이에 끼어드는 미들웨어(",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 877,
+   "ko": "한 줄 정의",
+   "ctx": "/guide/what-are-mods",
+   "n": 2
+  },
+  {
+   "i": 878,
+   "ko": "함수를 내보내고, 그 안에서",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 879,
+   "ko": "핸들러는 이 셋 중 하나로 이벤트를 처리해요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 880,
+   "ko": "화면 그리기",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 881,
+   "ko": "화면 표시",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 882,
+   "ko": "화면을 그리나요",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 883,
+   "ko": "화면을 그리는 mod는 지금 어떤 앱에서 돌고 있는지 확인해서, 그림을 못 그리는 곳에서는 트랜스크립트 줄이나 명령 답변 텍스트로 대신하는 게 좋아요.",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 884,
+   "ko": "화면을 그리는 기능",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 885,
+   "ko": "훅 실행",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 886,
+   "ko": "훅끼리 데이터 공유",
+   "ctx": "/guide/what-are-mods",
+   "n": 1
+  },
+  {
+   "i": 887,
+   "ko": "2026-10-06 @ 86b6831 · validate, 코드 읽음",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 1
+  },
+  {
+   "i": 888,
+   "ko": "Claude Code 안에서",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 69
+  },
+  {
+   "i": 889,
+   "ko": "P1(목표 달성 확률, 점수 비중 20)은 로컬 127.0.0.1:8010에 떠 있는 'Kev의 System One'이라는 별도 서비스가 있어야 값이 나와요. 없으면 조용히 빠지고 나머지 항목만으로 재계산돼요. 추가 설치 없이도 상태줄 점수·압축 보존 템플릿 같은 핵심 기능은 전부 동작해요.",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 1
+  },
+  {
+   "i": 890,
+   "ko": "mod는 샌드박스 없이 내 권한으로 실행돼요. 정적 분석으로 확인한 범위예요.",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 66
+  },
+  {
+   "i": 891,
+   "ko": "같은 저자의 다른 mod agent-shell-watch가 설치돼 있으면 백그라운드 작업(대기·실행 중)도 점수에 반영돼요. 없으면 그 부분이 '알 수 없음' 취급돼 점수가 60점에 캡돼요(정상 동작, 설치 필수 아님).",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 1
+  },
+  {
+   "i": 892,
+   "ko": "다루는 이벤트",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 66
+  },
+  {
+   "i": 893,
+   "ko": "대화 읽기",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 46
+  },
+  {
+   "i": 894,
+   "ko": "도구 호출 제어",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 35
+  },
+  {
+   "i": 895,
+   "ko": "리더오버 판정은 에이전트의 마지막 답변에서 정해진 접두어로 시작하는 줄만 봐요. 프롬프트에 '해야 할 일이 남아있다'는 식의 자연어 서술은 감지 못 해요(README에 명시된 한계).",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 1
+  },
+  {
+   "i": 896,
+   "ko": "보이는 곳",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 63
+  },
+  {
+   "i": 897,
+   "ko": "알아 둘 점",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 44
+  },
+  {
+   "i": 898,
+   "ko": "원본 그대로",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 58
+  },
+  {
+   "i": 899,
+   "ko": "원작자 저장소에 별 남기기",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 60
+  },
+  {
+   "i": 900,
+   "ko": "이 mod가 내 컴퓨터에서 하는 일",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 66
+  },
+  {
+   "i": 901,
+   "ko": "이 정보 고치기",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 69
+  },
+  {
+   "i": 902,
+   "ko": "이미 열려 있는 세션에는 /reload-plugins로 바로 적용돼요. Claude Code 2.1.287 이상이 필요해요.",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 69
+  },
+  {
+   "i": 903,
+   "ko": "자동화 분류의 다른 mod",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 8
+  },
+  {
+   "i": 904,
+   "ko": "전체 mod 보기",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 68
+  },
+  {
+   "i": 905,
+   "ko": "정적 분석 결과",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 66
+  },
+  {
+   "i": 906,
+   "ko": "터미널 · 데스크톱",
+   "ctx": "/mods/agent-compact-advisor",
+   "n": 50
+  },
+  {
+   "i": 907,
+   "ko": "2026-10-06 @ 375af90 · validate, 코드 읽음",
+   "ctx": "/mods/agent-flow",
+   "n": 6
+  },
+  {
+   "i": 908,
+   "ko": "데스크톱 앱에서의 동작은 README·코드에 명시적 확인이 없어 이번 리뷰에서는 terminal만 표시했어요(테스트도 terminal surface 기준)",
+   "ctx": "/mods/agent-flow",
+   "n": 1
+  },
+  {
+   "i": 909,
+   "ko": "도구 분류의 다른 mod",
+   "ctx": "/mods/agent-flow",
+   "n": 16
+  },
+  {
+   "i": 910,
+   "ko": "순수 관찰용 mod예요. 모든 훅이 next(e) 결과를 그대로 통과시키고 $.agent.list·$.session.usage만 추가로 읽어요",
+   "ctx": "/mods/agent-flow",
+   "n": 1
+  },
+  {
+   "i": 911,
+   "ko": "2026-10-06 @ 29aef14 · validate, 코드 읽음",
+   "ctx": "/mods/agent-quick-menu",
+   "n": 1
+  },
+  {
+   "i": 912,
+   "ko": "Claude Code 2.1.287 이상, macOS/Linux 터미널이나 데스크톱 Code 탭 기준이에요. VS Code 채팅 패널은 지원 안 하고 Windows는 저자가 테스트하지 않았다고 README에 적혀 있어요.",
+   "ctx": "/mods/agent-quick-menu",
+   "n": 1
+  },
+  {
+   "i": 913,
+   "ko": "다른 플러그인의 명령을 대신 실행해 주는 구조라, 자기 플러그인이 아닌 명령은 두 번 눌러야(5초 내 재확인) 실행돼요.",
+   "ctx": "/mods/agent-quick-menu",
+   "n": 1
+  },
+  {
+   "i": 914,
+   "ko": "읽는 환경 변수",
+   "ctx": "/mods/agent-quick-menu",
+   "n": 26
+  },
+  {
+   "i": 915,
+   "ko": "파일 읽기",
+   "ctx": "/mods/agent-quick-menu",
+   "n": 19
+  },
+  {
+   "i": 916,
+   "ko": "환경·설정 읽기",
+   "ctx": "/mods/agent-quick-menu",
+   "n": 28
+  },
+  {
+   "i": 917,
+   "ko": "2026-10-06 @ adf9d72 · validate, 코드 읽음",
+   "ctx": "/mods/agent-radar",
+   "n": 10
+  },
+  {
+   "i": 918,
+   "ko": "같은 저장소의 mission-control도 서브에이전트를 추적하지만 코드맵까지 포함한 더 무거운 패널이에요. agent-radar는 가볍고 단일 목적(에이전트 상태)이라 함께 설치해도 역할이 겹치지 않는다고 판단했어요.",
+   "ctx": "/mods/agent-radar",
+   "n": 1
+  },
+  {
+   "i": 919,
+   "ko": "상태줄 분류의 다른 mod",
+   "ctx": "/mods/agent-radar",
+   "n": 18
+  },
+  {
+   "i": 920,
+   "ko": "2026-10-06 @ 8d762ce · validate, 코드 읽음",
+   "ctx": "/mods/auto-handoff",
+   "n": 1
+  },
+  {
+   "i": 921,
+   "ko": "모델 호출",
+   "ctx": "/mods/auto-handoff",
+   "n": 7
+  },
+  {
+   "i": 922,
+   "ko": "없음 · 설치하면 알아서 동작해요",
+   "ctx": "/mods/auto-handoff",
+   "n": 18
+  },
+  {
+   "i": 923,
+   "ko": "파일 쓰기",
+   "ctx": "/mods/auto-handoff",
+   "n": 6
+  },
+  {
+   "i": 924,
+   "ko": "프롬프트 입력",
+   "ctx": "/mods/auto-handoff",
+   "n": 10
+  },
+  {
+   "i": 925,
+   "ko": "2026-10-06 @ 569c528 · validate, 코드 읽음, 테스트, 실사용 확인",
+   "ctx": "/mods/blast-radius-ko",
+   "n": 1
+  },
+  {
+   "i": 926,
+   "ko": "원본과 다른 점",
+   "ctx": "/mods/blast-radius-ko",
+   "n": 2
+  },
+  {
+   "i": 927,
+   "ko": "지킴이 분류의 다른 mod",
+   "ctx": "/mods/blast-radius-ko",
+   "n": 5
+  },
+  {
+   "i": 928,
+   "ko": "--isolated 없이 Playwright MCP를 쓰면 세션마다 Chrome 프로필을 공유해 두 번째 세션이 'Browser is already in use' 오류를 겪는데, 이 mod는 그 상황을 알려주고 /browser clean으로 정리해 주는 역할이에요. 근본 해결은 --isolated 설정이라고 README에도 명시돼 있어요.",
+   "ctx": "/mods/browser-lanes",
+   "n": 1
+  },
+  {
+   "i": 929,
+   "ko": "Playwright MCP 서버 (claude mcp add playwright --scope user -- npx @playwright/mcp@latest --isolated 권장)",
+   "ctx": "/mods/browser-lanes",
+   "n": 1
+  },
+  {
+   "i": 930,
+   "ko": "2026-10-06 @ 9e7d228 · validate, 코드 읽음",
+   "ctx": "/mods/cache-panel",
+   "n": 1
+  },
+  {
+   "i": 931,
+   "ko": "2026-10-06 @ 0baff06 · validate, 코드 읽음",
+   "ctx": "/mods/cc-arcade",
+   "n": 1
+  },
+  {
+   "i": 932,
+   "ko": "Claude Code 2.1.287 미만이면 CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 환경 변수 필요",
+   "ctx": "/mods/cc-arcade",
+   "n": 1
+  },
+  {
+   "i": 933,
+   "ko": "대화형 터미널(비대화형",
+   "ctx": "/mods/cc-arcade",
+   "n": 1
+  },
+  {
+   "i": 934,
+   "ko": "로 Doom을 빨강·초록 구분 없는 팔레트로 바꿀 수 있어요.",
+   "ctx": "/mods/cc-arcade",
+   "n": 1
+  },
+  {
+   "i": 935,
+   "ko": "모드에서는 동작하지 않아요)",
+   "ctx": "/mods/cc-arcade",
+   "n": 1
+  },
+  {
+   "i": 936,
+   "ko": "애니메이션 분류의 다른 mod",
+   "ctx": "/mods/cc-arcade",
+   "n": 8
+  },
+  {
+   "i": 937,
+   "ko": "장르를 본뜬 클론이며 Tetris Holding·Taito·Atari·id Software와 무관해요(업스트림 설명 그대로).",
+   "ctx": "/mods/cc-arcade",
+   "n": 1
+  },
+  {
+   "i": 938,
+   "ko": "최고 점수와 펫 상태는 로컬 $.store에만 저장돼요.",
+   "ctx": "/mods/cc-arcade",
+   "n": 1
+  },
+  {
+   "i": 939,
+   "ko": "2026-10-06 @ 605b8fc · validate, 코드 읽음",
+   "ctx": "/mods/cc-pr-tracker",
+   "n": 1
+  },
+  {
+   "i": 940,
+   "ko": "CLI 인증을 그대로 써요. 별도 토큰을 저장하지 않아요.",
+   "ctx": "/mods/cc-pr-tracker",
+   "n": 1
+  },
+  {
+   "i": 941,
+   "ko": "GitHub 접근은 전부 사용자의",
+   "ctx": "/mods/cc-pr-tracker",
+   "n": 1
+  },
+  {
+   "i": 942,
+   "ko": "cmux라는 특정 환경(CMUX_BUNDLED_CLI_PATH 등)에서만 추가 알림을 보내고, 없으면 조용히 건너뛰어요.",
+   "ctx": "/mods/cc-pr-tracker",
+   "n": 1
+  },
+  {
+   "i": 943,
+   "ko": "gh CLI 설치 및 로그인",
+   "ctx": "/mods/cc-pr-tracker",
+   "n": 1
+  },
+  {
+   "i": 944,
+   "ko": "notifyClaude 설정이 켜져 있으면(기본값) PR 상태가 바뀔 때 Claude가 다음 턴에 읽는 안내 메시지를 대화에 추가해요. 끄려면 /config에서 notifyClaude를 꺼요.",
+   "ctx": "/mods/cc-pr-tracker",
+   "n": 1
+  },
+  {
+   "i": 945,
+   "ko": "연동 분류의 다른 mod",
+   "ctx": "/mods/cc-pr-tracker",
+   "n": 7
+  },
+  {
+   "i": 946,
+   "ko": "체크 이름·PR 제목처럼 GitHub에서 온 텍스트는 제어문자를 제거하고, Claude에게 보내는 알림 문구는 '자동 생성된 데이터'라고 명시해서 프롬프트 주입을 막아요.",
+   "ctx": "/mods/cc-pr-tracker",
+   "n": 1
+  },
+  {
+   "i": 947,
+   "ko": "2026-10-06 @ 8355092 · validate, 코드 읽음",
+   "ctx": "/mods/clawd-spinner",
+   "n": 1
+  },
+  {
+   "i": 948,
+   "ko": "로 말풍선을 껐다 켤 수 있고, 설정은 세션 간 기억돼요.",
+   "ctx": "/mods/clawd-spinner",
+   "n": 1
+  },
+  {
+   "i": 949,
+   "ko": "좁은 터미널(50칸 미만)에서는 자동으로 숨고 기본 스피너만 보여요.",
+   "ctx": "/mods/clawd-spinner",
+   "n": 1
+  },
+  {
+   "i": 950,
+   "ko": "2026-10-06 @ 89c7f95 · validate, 코드 읽음",
+   "ctx": "/mods/clawd-tales",
+   "n": 1
+  },
+  {
+   "i": 951,
+   "ko": "mobile 화면에서는 그려지지 않도록 코드로 명시돼 있어요.",
+   "ctx": "/mods/clawd-tales",
+   "n": 1
+  },
+  {
+   "i": 952,
+   "ko": "서브에이전트가 뜨면 작은 동료가 따로 등장하고, 모델 색깔에 따라 외형이 달라져요.",
+   "ctx": "/mods/clawd-tales",
+   "n": 1
+  },
+  {
+   "i": 953,
+   "ko": "히어로의 걷기·환호 스프라이트 원형과 기본 팔레트는 Claude Fables(henrik-thevibe, MIT)에서 가져왔다고 NOTICE 파일에 명시돼 있어요.",
+   "ctx": "/mods/clawd-tales",
+   "n": 1
+  },
+  {
+   "i": 954,
+   "ko": "2026-10-06 @ 7f01ec0 · validate, 코드 읽음",
+   "ctx": "/mods/combo-meter",
+   "n": 1
+  },
+  {
+   "i": 955,
+   "ko": "k-mods 자체 mod인 ctx-strip과 개념이 겹쳐요(둘 다 컨텍스트 창을 막대로 보여줌). 이름은 다르므로(string 충돌 아님) 등록은 했지만, 기계적으로는 ctx-strip이 '막대 + 서브에이전트 한 줄'을 한 번에 보여주는 반면 context-bar는 /context와 동일한 카테고리별 색상·범례·압축 임계값 표시에 집중한 순수 컨텍스트 전용 버전이라는 차이가 있어요. 최종적으로 사용자에게 둘 다 보여줄지, 하나만 추천할지는 교차 조율이 필요해 보여요.",
+   "ctx": "/mods/context-bar",
+   "n": 1
+  },
+  {
+   "i": 956,
+   "ko": "2026-10-06 @ bd3bfd2 · validate, 코드 읽음",
+   "ctx": "/mods/ctx-handoff",
+   "n": 1
+  }
+ ]
+}
