@@ -43,7 +43,7 @@ def gh(args, stdin=None):
 
 
 TRANSIENT = ("REFUSED_STREAM", "stream error", "connection reset", "EOF", "502", "503", "504",
-             "timeout", "TLS handshake")
+             "timeout", "TLS handshake", "Bad credentials", "HTTP 401")
 
 
 def api(path, method=None, payload=None, attempts=3):
@@ -68,7 +68,7 @@ def api(path, method=None, payload=None, attempts=3):
         last = proc.stderr.strip()
         if attempt == attempts or not any(t in last for t in TRANSIENT):
             break
-        wait = 2 ** attempt
+        wait = 2 * attempt + 2
         print(f"  api {path} 일시 오류 ({last.splitlines()[0][:80]}) — {wait}s 뒤 재시도 {attempt}/{attempts - 1}")
         time.sleep(wait)
     raise SystemExit(f"gh {' '.join(args)} failed:\n{last}")
@@ -125,7 +125,7 @@ def main() -> int:
         return {"path": f"{FOLDER}/{rel}", "mode": "100644", "type": "blob", "sha": blob["sha"]}
 
     # blob 업로드는 서로 독립이라 8개씩 병렬로 (160여 개면 5분 → 40초)
-    with ThreadPoolExecutor(max_workers=8) as pool:
+    with ThreadPoolExecutor(max_workers=4) as pool:
         tree = list(pool.map(upload, files))
     print(f"blobs: {len(tree)}")
 
