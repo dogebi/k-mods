@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seonggwangju.github.io/k-mods/sitemap-index.xml
