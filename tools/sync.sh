@@ -36,6 +36,9 @@ python3 "$ROOT/tools/patch_links.py" || { say "patch_links failed"; exit 1; }
 # 3b-2) 원본 저장소 표기 → dogebi/k-mods (사전 키까지 같이 바꿔야 게이트가 맞는다)
 python3 "$ROOT/tools/apply_repo_links.py" || { say "apply_repo_links failed"; exit 1; }
 
+# 3b-3) 꼬리글 '만든 사람' 메뉴 제거 (ko/en, zh/ja 는 빌드에서 따라온다)
+python3 "$ROOT/tools/strip_author.py" || say "strip_author failed"
+
 # 3c) 언어 선택기 4개 + zh/ja 트리 재생성 (사전이 있으면)
 python3 "$ROOT/tools/add_locales.py" || say "add_locales failed"
 if [ -d "$ROOT/data/i18n/out/zh" ] && [ -d "$ROOT/data/i18n/out/ja" ]; then
