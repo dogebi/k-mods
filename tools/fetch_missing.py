@@ -20,6 +20,8 @@ SITE = os.path.join(ROOT, "k-mods")
 ORIGIN = "https://seonggwangju.github.io"
 REF = re.compile(r'(?:href|src|poster|data-src)="(/k-mods/[^"\s]+)')
 SRCSET = re.compile(r'srcset="([^"]+)"')
+# og:image / twitter:image 는 <meta content> 안에 절대 주소로 들어 있다
+META_IMAGE = re.compile(r'<meta[^>]+(?:property|name)="(?:og:image|twitter:image)"[^>]+content="([^"]+)"')
 
 
 def local_path(rel: str) -> str:
@@ -38,6 +40,11 @@ def main() -> int:
                 url = part.strip().split(" ")[0]
                 if url.startswith("/k-mods/"):
                     refs.append(url)
+        for url in META_IMAGE.findall(html):
+            for host in ("https://seonggwangju.github.io", "https://dogebi.github.io"):
+                if url.startswith(host + "/k-mods/"):
+                    refs.append(url[len(host):])
+                    break
         for ref in refs:
             clean = ref.split("#")[0].split("?")[0]
             if not clean or clean.endswith("/"):
