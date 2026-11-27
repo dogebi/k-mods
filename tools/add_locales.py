@@ -27,8 +27,9 @@ LIVE = "https://dogebi.github.io"
 
 
 def current_locale(page: str) -> str:
+    # k-mods/en/index.html 처럼 로케일 폴더 바로 아래 있는 페이지도 있다 — 길이로 판단하지 말 것
     rel = os.path.relpath(page, SITE).split(os.sep)
-    return rel[0] if len(rel) > 2 and rel[0] in ("en", "zh", "ja") else "ko"
+    return rel[0] if rel[0] in ("en", "zh", "ja") else "ko"
 
 
 def main() -> int:
@@ -49,15 +50,16 @@ def main() -> int:
             continue
         code = current_locale(page)
         route = base_route(page)
-        want = switcher_html(route, code)
-        have = "".join(str(a) for a in seg.find_all("a"))
-        needs = have.replace(' aria-current="true"', "") != want.replace(' aria-current="true"', "")
+        want_soup = BeautifulSoup(switcher_html(route, code), "html.parser")
+        want = [(a.get("href"), a.get("aria-current") == "true") for a in want_soup.find_all("a")]
+        have = [(a.get("href"), a.get("aria-current") == "true") for a in seg.find_all("a")]
+        needs = have != want
         if needs:
             if args.check:
                 changed += 1
                 continue
             seg.clear()
-            seg.append(BeautifulSoup(want, "html.parser"))
+            seg.append(BeautifulSoup(switcher_html(route, code), "html.parser"))
             # hreflang alternates 4개 유지
             for tag in soup.find_all("link", rel="alternate"):
                 lang = tag.get("hreflang")

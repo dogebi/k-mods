@@ -23,6 +23,33 @@ tools/
   deploy_hub.py             dogebi.github.io/k-mods/ 로 Git Data API 배포 + 바이트 대조
 ```
 
+## 언어 (ko / en / zh-Hans / ja)
+
+원본 미러는 한국어·영어 두 트리만 있었습니다. `dogebi-page-locale-pass` 7단계로 중국어(간체)와
+일본어를 더했습니다.
+
+```
+data/i18n/ko-strings.json    한국어 고유 문자열 1,277 + 속성 54 (추출기 산출물)
+data/i18n/out/<locale>/      번역 청크 결과
+data/i18n/<locale>.json      병합 사전
+k-mods/zh/**, k-mods/ja/**   생성된 페이지 76장씩
+```
+
+```bash
+python3 tools/i18n_extract.py --merge   # 새 문자열만 id 를 보존하며 덧붙인다
+python3 tools/i18n_extras.py            # 짧은 조각(카테고리·표 낱말·조사) 채우기
+python3 tools/i18n_build.py --check     # 게이트만
+python3 tools/i18n_build.py             # 152장 생성
+python3 tools/add_locales.py            # 언어 선택기 4개 (멱등)
+python3 tools/make_sitemap.py           # 304 URL + hreflang
+```
+
+게이트가 거부하는 것: 번역 누락, 빈 값(단 중국어의 조사 생략은 예외), 한글 잔여, 한자/가나
+없는 값, ld+json 안의 한글. 빌드는 페이지 단위로 실패를 기록하고 그 페이지만 쓰지 않습니다.
+
+크론(`k-mods-sync`, 매일 09:40)은 `apply_theme → patch_links → add_locales → i18n_build →
+make_sitemap` 순서로 돌아, 원본이 갱신돼도 새 문자열만 번역하면 되도록 id 를 고정합니다.
+
 ## 디자인 토큰 (design-tokens.json)
 
 `design-tokens.json` 은 1in8b.life 에서 **실측 추출**한 값입니다 — `/a/s.9514f42e86.css`(3059규칙)의
