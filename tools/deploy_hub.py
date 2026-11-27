@@ -17,6 +17,7 @@ import hashlib
 import json
 import os
 import subprocess
+import time
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
@@ -41,7 +42,17 @@ def gh(args, stdin=None):
     return proc.stdout
 
 
-def api(path, method=None, payload=None):
+TRANSIENT = ("REFUSED_STREAM", "stream error", "connection reset", "EOF", "502", "503", "504",
+             "timeout", "TLS handshake")
+
+
+def api(path, method=None, payload=None, attempts=3):
+    """GitHub API 호출. http2 스트림이 끊기는 일시 오류는 다시 시도한다.
+
+    ref PATCH 는 요청 본문을 이미 보낸 뒤 실패하면 gh 가 재시도하지 못하고
+    `REFUSED_STREAM ... define Request.GetBody` 로 죽는다. 커밋 객체는 이미 만들어졌는데
+    ref 만 안 옮겨가므로, 그대로 두면 배포가 조용히 실패한다.
+    """
     args = ["api", path]
     if method:
         args += ["-X", method]
@@ -49,8 +60,18 @@ def api(path, method=None, payload=None):
     if payload is not None:
         args += ["--input", "-"]
         body = json.dumps(payload)
-    out = gh(args, body)
-    return json.loads(out) if out.strip() else {}
+    last = ""
+    for attempt in range(1, attempts + 1):
+        proc = subprocess.run(["gh", *args], input=body, capture_output=True, text=True)
+        if proc.returncode == 0:
+            return json.loads(proc.stdout) if proc.stdout.strip() else {}
+        last = proc.stderr.strip()
+        if attempt == attempts or not any(t in last for t in TRANSIENT):
+            break
+        wait = 2 ** attempt
+        print(f"  api {path} 일시 오류 ({last.splitlines()[0][:80]}) — {wait}s 뒤 재시도 {attempt}/{attempts - 1}")
+        time.sleep(wait)
+    raise SystemExit(f"gh {' '.join(args)} failed:\n{last}")
 
 
 def collect():
