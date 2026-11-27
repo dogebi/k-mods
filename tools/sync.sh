@@ -30,6 +30,9 @@ python3 "$ROOT/tools/fetch_missing.py" || say "fetch_missing failed"
 # 3) 종이 테마 다시 입히기 (멱등)
 python3 "$ROOT/tools/apply_theme.py" || { say "apply_theme failed"; exit 1; }
 
+# 3b) 머리글 GitHub 아이콘 → 우리 저장소 (멱등)
+python3 "$ROOT/tools/patch_links.py" || { say "patch_links failed"; exit 1; }
+
 # 4) 변경 확인
 if git diff --quiet && git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
   say "no upstream changes"
