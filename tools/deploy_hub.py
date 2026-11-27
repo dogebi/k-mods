@@ -18,6 +18,7 @@ import json
 import os
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
 
 OWNER = "dogebi"
 REPO = "dogebi.github.io"
@@ -95,12 +96,16 @@ def main() -> int:
     parent = api(f"repos/{OWNER}/{REPO}/git/ref/heads/{BRANCH}")["object"]["sha"]
     print(f"parent commit: {parent[:10]}")
 
-    tree = []
-    for rel, path in files:
+    def upload(item):
+        rel, path = item
         raw = open(path, "rb").read()
         blob = api(f"repos/{OWNER}/{REPO}/git/blobs", "POST",
                    {"content": base64.b64encode(raw).decode("ascii"), "encoding": "base64"})
-        tree.append({"path": f"{FOLDER}/{rel}", "mode": "100644", "type": "blob", "sha": blob["sha"]})
+        return {"path": f"{FOLDER}/{rel}", "mode": "100644", "type": "blob", "sha": blob["sha"]}
+
+    # blob 업로드는 서로 독립이라 8개씩 병렬로 (160여 개면 5분 → 40초)
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        tree = list(pool.map(upload, files))
     print(f"blobs: {len(tree)}")
 
     new_tree = api(f"repos/{OWNER}/{REPO}/git/trees", "POST", {"base_tree": parent, "tree": tree})

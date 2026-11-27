@@ -18,7 +18,8 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "k-mods")
 ORIGIN = "https://seonggwangju.github.io"
-REF = re.compile(r'(?:href|src|srcset)="(/k-mods/[^"\s]+)')
+REF = re.compile(r'(?:href|src|poster|data-src)="(/k-mods/[^"\s]+)')
+SRCSET = re.compile(r'srcset="([^"]+)"')
 
 
 def local_path(rel: str) -> str:
@@ -30,7 +31,14 @@ def main() -> int:
     missing: set[str] = set()
     for page in glob.glob(os.path.join(SITE, "**", "*.html"), recursive=True):
         html = open(page, encoding="utf-8", errors="replace").read()
-        for ref in REF.findall(html):
+        refs = REF.findall(html)
+        # srcset="a 640w, b 1088w" 안의 URL 은 첫 토큰만 잡히므로 따로 훑는다
+        for group in SRCSET.findall(html):
+            for part in group.split(","):
+                url = part.strip().split(" ")[0]
+                if url.startswith("/k-mods/"):
+                    refs.append(url)
+        for ref in refs:
             clean = ref.split("#")[0].split("?")[0]
             if not clean or clean.endswith("/"):
                 continue
