@@ -19,10 +19,14 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "k-mods")
 MARK = 'href="/k-mods/paper.css"'
-FONT = 'family=Noto+Serif+KR'
-SNIPPET = (
-    '<link rel="stylesheet" href="/k-mods/paper.css">\n'
+FONT = 'family=Hahmlet'
+OLD_FONT = (
     '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&amp;display=swap">\n'
+)
+STYLE_LINK = '<link rel="stylesheet" href="/k-mods/paper.css">\n'
+FONT_LINK = (
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;500;700&amp;'
+    'family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">\n'
 )
 
 
@@ -37,7 +41,9 @@ def main() -> int:
     ok = missing = 0
     for page in pages:
         html = open(page, encoding="utf-8").read()
-        if MARK in html and FONT in html:
+        need_mark = MARK not in html
+        need_font = FONT not in html
+        if not need_mark and not need_font:
             ok += 1
             continue
         if args.check:
@@ -46,7 +52,15 @@ def main() -> int:
             continue
         if "</head>" not in html:
             sys.exit(f"{page}: no </head>")
-        html = html.replace("</head>", SNIPPET + "</head>", 1)
+        add = ""
+        if need_mark:
+            add += STYLE_LINK
+        if need_font:
+            # 예전 폰트 링크(Noto Serif KR) 가 남아 있으면 걷어내고 새 폰트로 바꾼다
+            if OLD_FONT in html:
+                html = html.replace(OLD_FONT, "", 1)
+            add += FONT_LINK
+        html = html.replace("</head>", add + "</head>", 1)
         open(page, "w", encoding="utf-8").write(html)
         ok += 1
     print(f"{'checked' if args.check else 'applied'}: {ok} pages themed, {missing} missing")

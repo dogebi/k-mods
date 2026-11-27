@@ -1,0 +1,86 @@
+{
+  "_source": "https://1in8b.life/zh-hans/ — /a/s.9514f42e86.css (3059 rules) + /fonts/fonts.css",
+  "_extracted": "2026-11-27, computed styles + rule text via CDP document.styleSheets",
+  "_note": "값은 원본 선언 그대로. k-mods 에는 paper.css 가 이 토큰을 k-mods 클래스에 대응시켜 적용한다.",
+
+  "color": {
+    "light": {
+      "paper": "#EBF0ED",
+      "card": "#F7FAF8",
+      "card2": "#F0F4F2",
+      "ink": "#13212A",
+      "ink2": "#4A5A61",
+      "ink3": "#5F6E72",
+      "rule": "#C7D2CE",
+      "rule2": "#DCE4E1",
+      "accent": "#8C1D3C",
+      "accentInk": "#FFFFFF",
+      "accentSoft": "#F3E3E8",
+      "stamp": "#0F6E68",
+      "stampSoft": "#DCEDEA",
+      "gold": "#9C7020",
+      "good": "#2B7A4E",
+      "bad": "#B0362B",
+      "warn": "#A8730F",
+      "loss": "#2C2F3A",
+      "shadow": "0 1px 0 rgba(19,33,42,.04), 0 8px 24px -12px rgba(19,33,42,.18)"
+    },
+    "dark": {
+      "paper": "#0D1316",
+      "card": "#141D21",
+      "card2": "#1A2428",
+      "ink": "#E1E9E6",
+      "ink2": "#A3B2AF",
+      "ink3": "#8A9A96",
+      "rule": "#2A383D",
+      "rule2": "#1D282C",
+      "accent": "#E2678A",
+      "accentInk": "#1B0910",
+      "accentSoft": "#3A1C26",
+      "stamp": "#4CC0AF",
+      "stampSoft": "#12302D",
+      "gold": "#D9AF59",
+      "good": "#5CC38B",
+      "bad": "#F07B6B",
+      "warn": "#E2B04C"
+    }
+  },
+
+  "font": {
+    "display": "'Hahmlet', 'Noto Serif KR', 'Nanum Myeongjo', Batang, Georgia, serif",
+    "body": "'IBM Plex Sans KR', 'SUIT Variable', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', system-ui, sans-serif",
+    "mono": "'IBM Plex Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+    "googleRequest": "family=Hahmlet:wght@400;500;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500"
+  },
+
+  "type": {
+    "body": { "size": "15px", "lineHeight": "1.6" },
+    "heroH1": { "size": "clamp(64px, 12vw, 168px)", "lineHeight": "0.92", "letterSpacing": "-0.03em", "weight": 700 },
+    "h2": { "size": "26px", "lineHeight": "1.25", "weight": 700 },
+    "h3": { "size": "20px", "lineHeight": "1.3", "weight": 600, "letterSpacing": "-0.01em" },
+    "kicker": { "family": "mono", "size": "12px", "letterSpacing": "0.02em", "color": "stamp" },
+    "small": { "size": "13.5px" },
+    "monoNum": { "variantNumeric": "tabular-nums" }
+  },
+
+  "layout": {
+    "wrapMax": "1320px",
+    "wrapPaddingInline": "20px",
+    "hero": { "columns": "minmax(0,1.2fr) minmax(0,1fr)", "gap": "48px" }
+  },
+
+  "surface": {
+    "panel": { "background": "card", "border": "1px solid rule", "radius": "4px", "padding": "16px" },
+    "card": { "radius": "4px", "border": "1px solid rule" },
+    "chip": { "border": "1px solid rule", "background": "card", "radius": "999px", "padding": "6px 12px", "fontSize": "13.5px" },
+    "bar": { "height": "8px", "background": "rule2", "radius": "1px" },
+    "stat": { "columns": "3.2em minmax(0,1fr) 2.2em", "gap": "10px", "fontSize": "13.5px", "paddingBlock": "4px" }
+  },
+
+  "rules": {
+    "noGradients": true,
+    "noGlow": true,
+    "shadowUse": "패널에는 그림자 없음(border 로만 구분), 페이지 푸터처럼 띄우는 면에만 --shadow",
+    "paperTexture": "페이지 배경에는 무늬 없음(평면). 점 무늬는 메모 카드 내부 요소에서만 쓴다"
+  }
+}
