@@ -129,12 +129,34 @@ def main() -> int:
         tree = list(pool.map(upload, files))
     print(f"blobs: {len(tree)}")
 
-    new_tree = api(f"repos/{OWNER}/{REPO}/git/trees", "POST", {"base_tree": parent, "tree": tree})
-    commit = api(f"repos/{OWNER}/{REPO}/git/commits", "POST",
-                 {"message": args.message, "tree": new_tree["sha"], "parents": [parent]})
+    # 이 허브 저장소는 다른 프로젝트도 함께 밀어 넣는다. blob 을 올리는 사이에
+    # head 가 앞으로 가 있으면 ref PATCH 가 422(not a fast forward)로 거절되므로,
+    # 그때는 **최신 head 를 부모로 커밋을 다시 만들어** 붙인다(트리는 그대로 재사용).
+    def publish(message: str) -> str:
+        base = api(f"repos/{OWNER}/{REPO}/git/ref/heads/{BRANCH}")["object"]["sha"]
+        new_tree = api(f"repos/{OWNER}/{REPO}/git/trees", "POST", {"base_tree": base, "tree": tree})
+        commit = api(f"repos/{OWNER}/{REPO}/git/commits", "POST",
+                     {"message": message, "tree": new_tree["sha"], "parents": [base]})
+        try:
+            api(f"repos/{OWNER}/{REPO}/git/refs/heads/{BRANCH}", "PATCH",
+                {"sha": commit["sha"], "force": False})
+        except SystemExit as exc:
+            if "fast forward" not in str(exc):
+                raise
+            print(f"  ref moved (parent {base[:10]}) — 최신 head 로 다시 커밋")
+            return ""
+        return commit["sha"]
+
+    sha = ""
+    for attempt in range(1, 4):
+        sha = publish(args.message if attempt == 1 else args.message + f" (retry {attempt})")
+        if sha:
+            break
+        time.sleep(2 * attempt)
+    if not sha:
+        sys.exit("ref update failed after 3 attempts")
+    commit = {"sha": sha}
     print(f"commit: {commit['sha'][:10]}")
-    api(f"repos/{OWNER}/{REPO}/git/refs/heads/{BRANCH}", "PATCH",
-        {"sha": commit["sha"], "force": False})
     head = api(f"repos/{OWNER}/{REPO}/git/ref/heads/{BRANCH}")["object"]["sha"]
     if head != commit["sha"]:
         sys.exit("ref update did not take effect")
